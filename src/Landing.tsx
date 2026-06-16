@@ -2,6 +2,16 @@ import { motion, useScroll, useTransform, useSpring, useMotionValue } from "fram
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
+import webDevImg from "./assets/services/web-dev.png";
+import mobileDevImg from "./assets/services/mobile-dev.png";
+import aiAutomationImg from "./assets/services/ai-automation.png";
+import cloudSolutionsImg from "./assets/services/cloud-solutions.png";
+import cybersecurityImg from "./assets/services/cybersecurity.png";
+import bigDataImg from "./assets/services/big-data.png";
+import rcmBillingImg from "./assets/services/rcm-billing.png";
+import designMarketingImg from "./assets/services/design-marketing.png";
+import blockchainImg from "./assets/services/blockchain.png";
+
 /* -------------------------- Logo -------------------------- */
 function BigBangMark({ size = 36 }: { size?: number }) {
   return (
@@ -56,7 +66,7 @@ function Nav() {
         </span>
       </a>
       <nav className="hidden md:flex items-center gap-10 text-sm text-[color:var(--muted-foreground)]">
-        <a href="#about" className="hover:text-white transition-colors">About</a>
+        <Link to="/about" className="hover:text-white transition-colors">About</Link>
         <Link to="/services" className="hover:text-white transition-colors">Services</Link>
         <a href="#founders" className="hover:text-white transition-colors">Founders</a>
         <a href="#contact" className="hover:text-white transition-colors">Contact</a>
@@ -495,15 +505,15 @@ function Skills() {
 
 /* -------------------------- Services -------------------------- */
 const SERVICES = [
-  { n: "01", t: "Web Development", d: "Performant, accessible web platforms engineered for scale and search." },
-  { n: "02", t: "Mobile App Development", d: "Native and cross-platform applications with cinematic interaction quality." },
-  { n: "03", t: "AI & Automation", d: "LLM systems, agents and orchestration that quietly run your business." },
-  { n: "04", t: "Cloud Solutions", d: "Multi-region, multi-cloud architecture with first-class observability." },
-  { n: "05", t: "Cybersecurity", d: "Threat modeling, hardening and continuous monitoring at enterprise grade." },
-  { n: "06", t: "Big Data", d: "Pipelines, lakehouses and analytics that turn signal into decisions." },
-  { n: "07", t: "Revenue Cycle Management", d: "Domain software for healthcare operations and reimbursement workflows." },
-  { n: "08", t: "Design & Digital Marketing", d: "Brand systems, motion identity and growth engineering, in one place." },
-  { n: "09", t: "Crypto · Blockchain · Web3", d: "Smart contracts, L2 infrastructure and tokenised product surfaces." },
+  { n: "01", t: "Web Development", d: "Performant, accessible web platforms engineered for scale and search.", img: webDevImg },
+  { n: "02", t: "Mobile App Development", d: "Native and cross-platform applications with cinematic interaction quality.", img: mobileDevImg },
+  { n: "03", t: "AI & Automation", d: "LLM systems, agents and orchestration that quietly run your business.", img: aiAutomationImg },
+  { n: "04", t: "Cloud Solutions", d: "Multi-region, multi-cloud architecture with first-class observability.", img: cloudSolutionsImg },
+  { n: "05", t: "Cybersecurity", d: "Threat modeling, hardening and continuous monitoring at enterprise grade.", img: cybersecurityImg },
+  { n: "06", t: "Big Data", d: "Pipelines, lakehouses and analytics that turn signal into decisions.", img: bigDataImg },
+  { n: "07", t: "Revenue Cycle Management", d: "Domain software for healthcare operations and reimbursement workflows.", img: rcmBillingImg },
+  { n: "08", t: "Design & Digital Marketing", d: "Brand systems, motion identity and growth engineering, in one place.", img: designMarketingImg },
+  { n: "09", t: "Crypto · Blockchain · Web3", d: "Smart contracts, L2 infrastructure and tokenised product surfaces.", img: blockchainImg },
 ];
 
 function Services() {
@@ -527,11 +537,16 @@ function Services() {
                 <motion.div
                   whileHover={{ y: -8, rotate: -0.4 }}
                   transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                  className="surface-card p-8 h-full flex flex-col justify-between min-h-[280px] group cursor-pointer"
+                  className="surface-card p-8 h-full flex flex-col justify-between min-h-[380px] group cursor-pointer"
                 >
-                  <div className="flex items-start justify-between">
-                    <span className="font-display text-sm text-[color:var(--gold)]">{s.n}</span>
-                    <div className="w-10 h-10 rounded-full border border-[color:var(--gold)]/20 flex items-center justify-center text-[color:var(--gold)] group-hover:bg-[color:var(--gold)] group-hover:text-[color:var(--space-0)] transition-all">→</div>
+                  <div>
+                    <div className="flex items-start justify-between">
+                      <span className="font-display text-sm text-[color:var(--gold)]">{s.n}</span>
+                      <div className="w-10 h-10 rounded-full border border-[color:var(--gold)]/20 flex items-center justify-center text-[color:var(--gold)] group-hover:bg-[color:var(--gold)] group-hover:text-[color:var(--space-0)] transition-all">→</div>
+                    </div>
+                    <div className="my-5 aspect-video w-full rounded-lg overflow-hidden border border-white/5 bg-[color:var(--space-ink)] relative flex items-center justify-center">
+                      <img src={s.img} alt={s.t} className="object-cover w-full h-full opacity-60 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700" />
+                    </div>
                   </div>
                   <div>
                     <h3 className="font-display text-3xl font-bold tracking-tight">{s.t}</h3>

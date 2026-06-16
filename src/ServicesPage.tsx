@@ -2,6 +2,16 @@ import { motion, useScroll, useTransform, useSpring, useMotionValue } from "fram
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
+import webDevImg from "./assets/services/web-dev.png";
+import mobileDevImg from "./assets/services/mobile-dev.png";
+import aiAutomationImg from "./assets/services/ai-automation.png";
+import cloudSolutionsImg from "./assets/services/cloud-solutions.png";
+import cybersecurityImg from "./assets/services/cybersecurity.png";
+import bigDataImg from "./assets/services/big-data.png";
+import rcmBillingImg from "./assets/services/rcm-billing.png";
+import designMarketingImg from "./assets/services/design-marketing.png";
+import blockchainImg from "./assets/services/blockchain.png";
+
 /* -------------------------- Logo -------------------------- */
 function BigBangMark({ size = 36 }: { size?: number }) {
   return (
@@ -57,7 +67,7 @@ function Nav() {
       </Link>
       <nav className="hidden md:flex items-center gap-10 text-sm text-[color:var(--muted-foreground)]">
         <Link to="/" className="hover:text-white transition-colors">Home</Link>
-        <a href="/#about" className="hover:text-white transition-colors">About</a>
+        <Link to="/about" className="hover:text-white transition-colors">About</Link>
         <Link to="/services" className="text-[color:var(--gold)] font-medium">Services</Link>
         <a href="/#founders" className="hover:text-white transition-colors">Founders</a>
         <a href="/#contact" className="hover:text-white transition-colors">Contact</a>
@@ -162,30 +172,7 @@ const SERVICES_DETAILS = [
       "Strict semantic HTML structures matching WCAG AA accessibility.",
       "Obsessive SEO hygiene designed for crawling efficiency."
     ],
-    mockup: (
-      <div className="w-full aspect-video rounded-xl border border-[color:var(--gold)]/20 bg-[color:var(--space-ink)] p-4 flex flex-col justify-between font-mono text-[11px] text-[color:var(--muted-foreground)]">
-        <div className="flex items-center justify-between border-b border-white/5 pb-2">
-          <div className="flex items-center gap-1.5">
-            <span className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
-            <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
-            <span className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
-          </div>
-          <span className="text-white/40">bigbang-web-service.ts</span>
-        </div>
-        <div className="flex-1 py-3 space-y-1 select-none">
-          <p className="text-[color:var(--gold-champagne)]">import &#123; createServer &#125; from "vite";</p>
-          <p className="text-white/80">const config = await loadConfig();</p>
-          <p className="text-emerald-400">// Optimize bundle sizes and split chunks</p>
-          <p className="text-white/60">export default defineConfig(&#123;</p>
-          <p className="pl-4 text-white/50">build: &#123; cssMinify: "lightningcss", minify: "terser" &#125;</p>
-          <p className="text-white/60">&#125;);</p>
-        </div>
-        <div className="flex justify-between items-center text-[10px] text-white/30 pt-2 border-t border-white/5">
-          <span>100% Core Web Vitals</span>
-          <span>UTF-8</span>
-        </div>
-      </div>
-    )
+    img: webDevImg
   },
   {
     id: "02",
@@ -199,23 +186,7 @@ const SERVICES_DETAILS = [
       "Optimized native bridging for device hardware.",
       "Seamless App Store & Google Play distribution pipeline."
     ],
-    mockup: (
-      <div className="relative w-48 aspect-[9/19] mx-auto rounded-[32px] border-4 border-white/10 bg-[color:var(--space-ink)] overflow-hidden p-3 flex flex-col justify-between shadow-2xl">
-        <div className="w-16 h-4 bg-white/10 rounded-full mx-auto mb-2" />
-        <div className="flex-1 flex flex-col justify-center items-center text-center space-y-3">
-          <div className="w-12 h-12 rounded-full border border-[color:var(--gold)]/30 flex items-center justify-center text-[color:var(--gold)] text-xl">◇</div>
-          <div>
-            <h4 className="text-[13px] font-semibold text-white">Orbit App</h4>
-            <p className="text-[10px] text-[color:var(--muted-foreground)]">Status: Fully Synchronized</p>
-          </div>
-          <div className="w-full bg-[color:var(--space-1)] p-2 rounded-lg border border-white/5 space-y-1">
-            <div className="h-1 bg-white/20 rounded w-3/4" />
-            <div className="h-1 bg-white/10 rounded w-1/2" />
-          </div>
-        </div>
-        <div className="w-16 h-1 bg-white/20 rounded-full mx-auto mt-2" />
-      </div>
-    )
+    img: mobileDevImg
   },
   {
     id: "03",
@@ -229,25 +200,7 @@ const SERVICES_DETAILS = [
       "Custom vector databases with lightning-fast semantic search.",
       "Secure integrations respecting privacy boundaries."
     ],
-    mockup: (
-      <div className="w-full aspect-video rounded-xl border border-[color:var(--gold)]/20 bg-[color:var(--space-ink)] p-4 flex flex-col justify-between text-[11px]">
-        <div className="flex items-center justify-between text-white/30 border-b border-white/5 pb-2">
-          <span>AGENT TRANSMISSION</span>
-          <span className="text-[color:var(--gold)] animate-pulse">● CONNECTED</span>
-        </div>
-        <div className="flex-1 flex flex-col justify-center space-y-2 py-2 font-mono">
-          <div className="text-white/60">
-            <span className="text-[color:var(--gold)]">User: </span> Analyse Q2 ledger anomalies.
-          </div>
-          <div className="text-[color:var(--gold-champagne)] pl-2 border-l border-[color:var(--gold)]/30">
-            <span className="text-white/40">Agent: </span> Found 3 spikes in cloud cost centroids matching non-business hours. Flagging for inspection...
-          </div>
-        </div>
-        <div className="text-[9px] text-white/30 border-t border-white/5 pt-2">
-          Latency: 142ms | Tokens: 4.2k/s
-        </div>
-      </div>
-    )
+    img: aiAutomationImg
   },
   {
     id: "04",
@@ -261,28 +214,7 @@ const SERVICES_DETAILS = [
       "Containerized microservices using Kubernetes orchestration.",
       "Hardened CI/CD workflows for hands-free releases."
     ],
-    mockup: (
-      <div className="w-full aspect-video rounded-xl border border-[color:var(--gold)]/20 bg-[color:var(--space-ink)] p-4 flex flex-col justify-between font-mono text-[11px] text-white/50">
-        <div className="border-b border-white/5 pb-2 text-white/30">PROD STATUS</div>
-        <div className="grid grid-cols-3 gap-3 py-3 text-center">
-          <div className="bg-[color:var(--space-1)] p-2 rounded border border-white/5">
-            <div className="text-xs text-[color:var(--gold)] font-bold">99.999%</div>
-            <div className="text-[9px] text-white/40 mt-1">Uptime</div>
-          </div>
-          <div className="bg-[color:var(--space-1)] p-2 rounded border border-white/5">
-            <div className="text-xs text-emerald-400 font-bold">14ms</div>
-            <div className="text-[9px] text-white/40 mt-1">Avg Latency</div>
-          </div>
-          <div className="bg-[color:var(--space-1)] p-2 rounded border border-white/5">
-            <div className="text-xs text-blue-400 font-bold">32 Nodes</div>
-            <div className="text-[9px] text-white/40 mt-1">Autoscale</div>
-          </div>
-        </div>
-        <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
-          <div className="h-full bg-gradient-to-r from-emerald-500 to-[color:var(--gold)] w-full" />
-        </div>
-      </div>
-    )
+    img: cloudSolutionsImg
   },
   {
     id: "05",
@@ -296,29 +228,7 @@ const SERVICES_DETAILS = [
       "Cloudflare WAF policies optimized for API shielding.",
       "Preparation for SOC2, HIPAA, and ISO 27001 validation."
     ],
-    mockup: (
-      <div className="w-full aspect-video rounded-xl border border-[color:var(--gold)]/20 bg-[color:var(--space-ink)] p-4 flex flex-col justify-between font-mono text-[11px]">
-        <div className="flex items-center justify-between border-b border-white/5 pb-2 text-white/30">
-          <span>PORT SHIELD ACTIVATED</span>
-          <span className="text-emerald-400">SECURE</span>
-        </div>
-        <div className="flex-1 flex flex-col justify-center space-y-1.5 py-2">
-          <div className="flex justify-between items-center bg-white/5 p-1 rounded px-2">
-            <span>SSL Handshake</span>
-            <span className="text-emerald-400">TLS 1.3 OK</span>
-          </div>
-          <div className="flex justify-between items-center bg-white/5 p-1 rounded px-2">
-            <span>DDoS Guard</span>
-            <span className="text-emerald-400">ACTIVE</span>
-          </div>
-          <div className="flex justify-between items-center bg-white/5 p-1 rounded px-2 text-white/30">
-            <span>XSS Filtering</span>
-            <span className="text-white/60">ENFORCED</span>
-          </div>
-        </div>
-        <div className="text-[9px] text-white/20">Shielding 42 endpoints in real-time</div>
-      </div>
-    )
+    img: cybersecurityImg
   },
   {
     id: "06",
@@ -332,28 +242,7 @@ const SERVICES_DETAILS = [
       "Robust ETL pipelines using dbt for reliable transformations.",
       "Data lakes structured for quick ML exploration."
     ],
-    mockup: (
-      <div className="w-full aspect-video rounded-xl border border-[color:var(--gold)]/20 bg-[color:var(--space-ink)] p-4 flex flex-col justify-between font-mono text-[11px] text-white/50">
-        <div className="border-b border-white/5 pb-2 text-white/30">DATAPUSH FLOW</div>
-        <div className="flex-1 flex items-center justify-between text-center py-2 relative">
-          <div className="bg-white/5 p-1 px-2.5 rounded border border-white/5">
-            <span className="text-blue-400">Kafka</span>
-          </div>
-          <span className="text-[color:var(--gold)]">→</span>
-          <div className="bg-white/5 p-1 px-2.5 rounded border border-white/5">
-            <span className="text-[color:var(--gold-champagne)]">Spark</span>
-          </div>
-          <span className="text-[color:var(--gold)]">→</span>
-          <div className="bg-white/5 p-1 px-2.5 rounded border border-white/5">
-            <span className="text-emerald-400">Snowflake</span>
-          </div>
-        </div>
-        <div className="text-[9px] text-white/30 flex justify-between">
-          <span>Ingest Rate: 1.2M events/s</span>
-          <span>Latency: 8ms</span>
-        </div>
-      </div>
-    )
+    img: bigDataImg
   },
   {
     id: "07",
@@ -367,24 +256,7 @@ const SERVICES_DETAILS = [
       "Custom analytics dashboards outlining payer performances.",
       "Strict HIPAA compliance audits built by default."
     ],
-    mockup: (
-      <div className="w-full aspect-video rounded-xl border border-[color:var(--gold)]/20 bg-[color:var(--space-ink)] p-4 flex flex-col justify-between text-[11px]">
-        <div className="flex justify-between border-b border-white/5 pb-2 text-white/30 font-mono">
-          <span>FHIR ENVELOPE</span>
-          <span className="text-[color:var(--gold)]">HIPAA COMPLIANT</span>
-        </div>
-        <div className="flex-1 flex flex-col justify-center space-y-1 py-1 font-mono text-[10px] text-white/60">
-          <p>{"{"}</p>
-          <p className="pl-3">"resourceType": "Claim",</p>
-          <p className="pl-3">"status": "active",</p>
-          <p className="pl-3">"use": "claim",</p>
-          <p className="pl-3">"patient": &#123; "reference": "Patient/0451" &#125;,</p>
-          <p className="pl-3">"total": &#123; "value": 450.00, "currency": "USD" &#125;</p>
-          <p>{"}"}</p>
-        </div>
-        <div className="text-[9px] text-white/20">Validation: Zod schema verified.</div>
-      </div>
-    )
+    img: rcmBillingImg
   },
   {
     id: "08",
@@ -398,33 +270,7 @@ const SERVICES_DETAILS = [
       "High-converting landing pages built on data insights.",
       "SEO/SEM content campaigns focusing on buyer search intent."
     ],
-    mockup: (
-      <div className="w-full aspect-video rounded-xl border border-[color:var(--gold)]/20 bg-[color:var(--space-ink)] p-3 flex flex-col justify-between">
-        <div className="flex justify-between items-center border-b border-white/5 pb-2">
-          <span className="text-[10px] font-mono text-white/30">DESIGN TOKEN MAP</span>
-          <div className="w-3.5 h-3.5 rounded-full bg-[color:var(--gold)] shadow-[0_0_8px_#D4AF37]" />
-        </div>
-        <div className="flex-1 grid grid-cols-4 gap-2 items-center text-center py-2 text-[10px] font-mono text-white/50">
-          <div className="p-1 rounded bg-[color:var(--space-0)] border border-white/5">
-            <div className="text-[color:var(--gold)]">#D4AF37</div>
-            <span className="text-[8px] text-white/20">Gold</span>
-          </div>
-          <div className="p-1 rounded bg-[color:var(--space-0)] border border-white/5">
-            <div>#0b0b10</div>
-            <span className="text-[8px] text-white/20">Space-0</span>
-          </div>
-          <div className="p-1 rounded bg-[color:var(--space-0)] border border-white/5">
-            <div>Fraunces</div>
-            <span className="text-[8px] text-white/20">Display</span>
-          </div>
-          <div className="p-1 rounded bg-[color:var(--space-0)] border border-white/5">
-            <div>Geist</div>
-            <span className="text-[8px] text-white/20">Sans</span>
-          </div>
-        </div>
-        <div className="text-[9px] font-mono text-white/20">Tokens synchronized across CSS variables</div>
-      </div>
-    )
+    img: designMarketingImg
   },
   {
     id: "09",
@@ -438,22 +284,7 @@ const SERVICES_DETAILS = [
       "Custom decentralized voting and DAO coordination layers.",
       "Fully audited smart contract deployments."
     ],
-    mockup: (
-      <div className="w-full aspect-video rounded-xl border border-[color:var(--gold)]/20 bg-[color:var(--space-ink)] p-4 flex flex-col justify-between font-mono text-[11px] text-white/50">
-        <div className="flex justify-between border-b border-white/5 pb-2 text-white/30">
-          <span>CONTRACT DEPLOY</span>
-          <span className="text-[color:var(--gold)]">SOLIDITY v0.8.20</span>
-        </div>
-        <div className="flex-1 flex flex-col justify-center space-y-1 py-2 text-[10px]">
-          <p className="text-[color:var(--gold-champagne)]">contract BigBangToken is ERC20 &#123;</p>
-          <p className="pl-3 text-white/40">constructor(uint256 initSupply) ERC20("BigBang", "BBT") &#123;</p>
-          <p className="pl-6 text-white/60">_mint(msg.sender, initSupply);</p>
-          <p className="pl-3 text-white/40">&#125;</p>
-          <p className="text-[color:var(--gold-champagne)]">&#125;</p>
-        </div>
-        <div className="text-[9px] text-emerald-400">Hash: 0x9a8f...4e1d | Success</div>
-      </div>
-    )
+    img: blockchainImg
   }
 ];
 
@@ -576,9 +407,9 @@ export default function ServicesPage() {
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.4 }}
-                  className="w-full max-w-md surface-card p-6 flex items-center justify-center bg-white/[0.01]"
+                  className="w-full max-w-md surface-card overflow-hidden p-2 flex items-center justify-center bg-white/[0.01]"
                 >
-                  {service.mockup}
+                  <img src={service.img} alt={service.title} className="w-full h-auto object-cover rounded-xl opacity-80 hover:opacity-100 transition-opacity duration-500" />
                 </motion.div>
               </div>
             </div>
