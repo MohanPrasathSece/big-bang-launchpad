@@ -1,6 +1,7 @@
 import { motion, useScroll, useTransform, useSpring, useMotionValue } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import Navbar, { BigBangMark } from "./components/Navbar";
 
 import webDevImg from "./assets/services/web-dev.png";
 import mobileDevImg from "./assets/services/mobile-dev.png";
@@ -11,70 +12,6 @@ import bigDataImg from "./assets/services/big-data.png";
 import rcmBillingImg from "./assets/services/rcm-billing.png";
 import designMarketingImg from "./assets/services/design-marketing.png";
 import blockchainImg from "./assets/services/blockchain.png";
-
-/* -------------------------- Logo -------------------------- */
-function BigBangMark({ size = 36 }: { size?: number }) {
-  return (
-    <motion.svg
-      width={size}
-      height={size}
-      viewBox="0 0 64 64"
-      fill="none"
-      initial={{ rotate: -90, opacity: 0, scale: 0.6 }}
-      animate={{ rotate: 0, opacity: 1, scale: 1 }}
-      transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-    >
-      <defs>
-        <radialGradient id="bg" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#E6C76B" />
-          <stop offset="60%" stopColor="#D4AF37" />
-          <stop offset="100%" stopColor="#B8941F" />
-        </radialGradient>
-      </defs>
-      <motion.circle
-        cx="32" cy="32" r="4" fill="url(#bg)"
-        animate={{ scale: [1, 1.15, 1] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.circle
-        cx="32" cy="32" r="14" stroke="#D4AF37" strokeWidth="0.7" fill="none"
-        animate={{ rotate: 360 }} transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
-        style={{ transformOrigin: "32px 32px" }}
-      />
-      <motion.ellipse
-        cx="32" cy="32" rx="26" ry="10" stroke="#D4AF37" strokeWidth="0.5" fill="none" opacity="0.7"
-        animate={{ rotate: -360 }} transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-        style={{ transformOrigin: "32px 32px" }}
-      />
-      <motion.ellipse
-        cx="32" cy="32" rx="10" ry="26" stroke="#B8941F" strokeWidth="0.5" fill="none" opacity="0.5"
-        animate={{ rotate: 360 }} transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-        style={{ transformOrigin: "32px 32px" }}
-      />
-    </motion.svg>
-  );
-}
-
-/* -------------------------- Nav -------------------------- */
-function Nav() {
-  return (
-    <header className="fixed top-0 inset-x-0 z-50 px-8 md:px-12 py-6 flex items-center justify-between backdrop-blur-md bg-[color:var(--space-0)]/40 border-b border-[color:var(--border)]">
-      <a href="#top" className="flex items-center gap-3">
-        <BigBangMark size={32} />
-        <span className="font-display font-semibold tracking-tight text-[15px]">
-          Big Bang<span className="text-[color:var(--gold)]">.</span>
-        </span>
-      </a>
-      <nav className="hidden md:flex items-center gap-10 text-sm text-[color:var(--muted-foreground)]">
-        <Link to="/about" className="hover:text-white transition-colors">About</Link>
-        <Link to="/services" className="hover:text-white transition-colors">Services</Link>
-        <a href="#founders" className="hover:text-white transition-colors">Founders</a>
-        <a href="#contact" className="hover:text-white transition-colors">Contact</a>
-      </nav>
-      <a href="#contact" className="btn-gold !py-3 !px-5 text-sm">Start a project</a>
-    </header>
-  );
-}
 
 /* -------------------------- Cosmic visual -------------------------- */
 function CosmicSystem() {
@@ -862,7 +799,7 @@ export default function Landing() {
     <main className="bg-[color:var(--space-0)] text-[color:var(--foreground)] overflow-x-clip">
       <Progress />
       <LuxuryCursor />
-      <Nav />
+      <Navbar />
       <Hero />
       <WhatWeDo />
       <Who />

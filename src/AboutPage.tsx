@@ -1,71 +1,7 @@
 import { motion, useScroll, useTransform, useSpring, useMotionValue } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-
-/* -------------------------- Logo -------------------------- */
-function BigBangMark({ size = 36 }: { size?: number }) {
-  return (
-    <motion.svg
-      width={size}
-      height={size}
-      viewBox="0 0 64 64"
-      fill="none"
-      initial={{ rotate: -90, opacity: 0, scale: 0.6 }}
-      animate={{ rotate: 0, opacity: 1, scale: 1 }}
-      transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-    >
-      <defs>
-        <radialGradient id="bg" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#E6C76B" />
-          <stop offset="60%" stopColor="#D4AF37" />
-          <stop offset="100%" stopColor="#B8941F" />
-        </radialGradient>
-      </defs>
-      <motion.circle
-        cx="32" cy="32" r="4" fill="url(#bg)"
-        animate={{ scale: [1, 1.15, 1] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.circle
-        cx="32" cy="32" r="14" stroke="#D4AF37" strokeWidth="0.7" fill="none"
-        animate={{ rotate: 360 }} transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
-        style={{ transformOrigin: "32px 32px" }}
-      />
-      <motion.ellipse
-        cx="32" cy="32" rx="26" ry="10" stroke="#D4AF37" strokeWidth="0.5" fill="none" opacity="0.7"
-        animate={{ rotate: -360 }} transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-        style={{ transformOrigin: "32px 32px" }}
-      />
-      <motion.ellipse
-        cx="32" cy="32" rx="10" ry="26" stroke="#B8941F" strokeWidth="0.5" fill="none" opacity="0.5"
-        animate={{ rotate: 360 }} transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-        style={{ transformOrigin: "32px 32px" }}
-      />
-    </motion.svg>
-  );
-}
-
-/* -------------------------- Nav -------------------------- */
-function Nav() {
-  return (
-    <header className="fixed top-0 inset-x-0 z-50 px-8 md:px-12 py-6 flex items-center justify-between backdrop-blur-md bg-[color:var(--space-0)]/40 border-b border-[color:var(--border)]">
-      <Link to="/" className="flex items-center gap-3">
-        <BigBangMark size={32} />
-        <span className="font-display font-semibold tracking-tight text-[15px]">
-          Big Bang<span className="text-[color:var(--gold)]">.</span>
-        </span>
-      </Link>
-      <nav className="hidden md:flex items-center gap-10 text-sm text-[color:var(--muted-foreground)]">
-        <Link to="/" className="hover:text-white transition-colors">Home</Link>
-        <Link to="/about" className="text-[color:var(--gold)] font-medium">About</Link>
-        <Link to="/services" className="hover:text-white transition-colors">Services</Link>
-        <a href="/#founders" className="hover:text-white transition-colors">Founders</a>
-        <a href="/#contact" className="hover:text-white transition-colors">Contact</a>
-      </nav>
-      <a href="/#contact" className="btn-gold !py-3 !px-5 text-sm">Start a project</a>
-    </header>
-  );
-}
+import Navbar, { BigBangMark } from "./components/Navbar";
 
 /* -------------------------- Cosmic visual -------------------------- */
 function CosmicSystem() {
@@ -227,7 +163,7 @@ export default function AboutPage() {
     <main className="bg-[color:var(--space-0)] text-[color:var(--foreground)] overflow-x-clip min-h-screen relative noise pb-20">
       <Progress />
       <LuxuryCursor />
-      <Nav />
+      <Navbar />
       <CosmicSystem />
 
       {/* Hero Section */}
@@ -269,23 +205,37 @@ export default function AboutPage() {
         <div className="text-eyebrow mb-6 text-center">Our Journey</div>
         <h2 className="text-section text-center mb-20">Tracing the cosmic trajectory.</h2>
 
-        <div className="relative border-l border-[color:var(--gold)]/20 ml-4 md:ml-1/2 space-y-16 py-8">
-          {TIMELINE.map((item, index) => (
-            <div key={item.y} className="relative pl-8 md:pl-0 md:w-1/2 md:odd:ml-0 md:even:ml-auto md:odd:text-right md:odd:-translate-x-8 md:even:translate-x-8">
-              {/* Dot indicator */}
-              <div className="absolute w-3 h-3 rounded-full bg-[color:var(--gold)] top-1.5 -left-1.5 md:left-auto md:right-0 md:odd:-right-[1.5px] md:even:-left-[1.5px]" style={{ boxShadow: "0 0 12px #D4AF37" }} />
-              
-              <Reveal delay={index * 0.1}>
-                <div className="space-y-3">
-                  <span className="font-display text-4xl font-bold gold-text leading-none">{item.y}</span>
-                  <h3 className="font-display text-xl font-bold text-white">{item.t}</h3>
-                  <p className="text-xs md:text-sm text-[color:var(--muted-foreground)] leading-relaxed max-w-md md:odd:ml-auto">
-                    {item.d}
-                  </p>
-                </div>
-              </Reveal>
-            </div>
-          ))}
+        <div className="relative mt-16 py-8 w-full max-w-4xl mx-auto">
+          {/* Vertical Line */}
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-[color:var(--gold)]/20 -translate-x-1/2" />
+          
+          <div className="space-y-12">
+            {TIMELINE.map((item, index) => (
+              <div 
+                key={item.y} 
+                className={`relative w-full md:w-1/2 pl-12 md:pl-0 ${index % 2 === 0 ? "md:pr-12 md:ml-0" : "md:pl-12 md:ml-auto"}`}
+              >
+                {/* Dot indicator */}
+                <div className={`absolute w-4 h-4 rounded-full border-2 border-[color:var(--gold)] bg-[color:var(--space-0)] top-8 -left-2 md:left-auto z-10 ${index % 2 === 0 ? "md:-right-2" : "md:-left-2"}`} style={{ boxShadow: "0 0 12px #D4AF37" }} />
+                
+                <Reveal delay={index * 0.1}>
+                  <motion.div 
+                    whileHover={{ y: -4 }}
+                    className="surface-card p-6 md:p-8 text-left"
+                  >
+                    <div className="flex justify-between items-baseline mb-4">
+                      <span className="font-display text-4xl font-bold gold-text leading-none">{item.y}</span>
+                      <span className="text-[10px] text-[color:var(--gold)] tracking-widest font-mono uppercase">Phase 0{index + 1}</span>
+                    </div>
+                    <h3 className="font-display text-2xl font-bold text-white mb-3">{item.t}</h3>
+                    <p className="text-xs md:text-sm text-[color:var(--muted-foreground)] leading-relaxed">
+                      {item.d}
+                    </p>
+                  </motion.div>
+                </Reveal>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
