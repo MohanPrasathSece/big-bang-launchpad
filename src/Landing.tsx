@@ -135,7 +135,7 @@ function SplitHeadline({ text }: { text: string }) {
   return (
     <h1 className="text-hero">
       {words.map((w, i) => (
-        <span key={i} className="inline-block overflow-hidden align-top mr-[0.25em]">
+        <span key={i} className="inline-block overflow-hidden align-top mr-[0.25em] pb-[0.15em] -mb-[0.15em]">
           <motion.span
             className="inline-block"
             initial={{ y: "110%" }}
@@ -390,7 +390,7 @@ function Founders() {
           <h2 className="text-section max-w-3xl">The architects of the cosmos.</h2>
         </Reveal>
 
-        <div className="mt-16 grid sm:grid-cols-2 gap-8 max-w-3xl">
+        <div className="mx-auto mt-16 grid sm:grid-cols-2 gap-8 max-w-3xl">
           {founders.map((f, i) => (
             <Reveal key={f.name} delay={i * 0.1}>
               <motion.div
@@ -434,9 +434,9 @@ function Mission() {
           {words.map((w, i) => (
             <motion.span
               key={i}
-              initial={{ opacity: 0.1 }}
+              initial={{ opacity: 0.25 }}
               whileInView={{ opacity: 1 }}
-              viewport={{ once: false, margin: "-30%" }}
+              viewport={{ once: true, margin: "-10%" }}
               transition={{ duration: 0.4, delay: i * 0.02 }}
               className="inline-block mr-[0.2em]"
             >
@@ -649,14 +649,11 @@ function Contact() {
 
         <Reveal delay={0.15}>
           <form className="mt-20 grid md:grid-cols-2 gap-10 max-w-4xl">
-            {[
-              { l: "Your name", t: "text" },
-              { l: "Email", t: "email" },
-              { l: "Company", t: "text" },
-              { l: "Budget", t: "text" },
-            ].map((f) => (
-              <Field key={f.l} label={f.l} type={f.t} />
-            ))}
+            <Field label="Your name" type="text" />
+            <Field label="Email" type="email" />
+            <div className="md:col-span-2">
+              <Field label="Mobile number" type="tel" />
+            </div>
             <div className="md:col-span-2">
               <Field label="Tell us about your project" type="textarea" />
             </div>
