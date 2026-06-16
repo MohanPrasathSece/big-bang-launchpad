@@ -82,7 +82,7 @@ function SplitHeadline({ text }: { text: string }) {
   return (
     <h1 className="text-hero">
       {words.map((w, i) => (
-        <span key={i} className="inline-block overflow-hidden mr-[0.25em] pt-[0.25em] pb-[0.25em] -mt-[0.25em] -mb-[0.25em]">
+        <span key={i} className="inline-block overflow-hidden align-top mr-[0.25em] pt-[0.25em] pb-[0.25em] -mt-[0.25em] -mb-[0.25em]">
           <motion.span
             className="inline-block"
             initial={{ y: "110%" }}
