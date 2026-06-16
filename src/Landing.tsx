@@ -82,7 +82,7 @@ function SplitHeadline({ text }: { text: string }) {
   return (
     <h1 className="text-hero">
       {words.map((w, i) => (
-        <span key={i} className="inline-block overflow-hidden align-top mr-[0.25em] pb-[0.15em] -mb-[0.15em]">
+        <span key={i} className="inline-block overflow-hidden mr-[0.25em] pt-[0.25em] pb-[0.25em] -mt-[0.25em] -mb-[0.25em]">
           <motion.span
             className="inline-block"
             initial={{ y: "110%" }}
@@ -148,10 +148,10 @@ function Hero() {
 
         {/* Floating chip cards */}
         <div className="hidden lg:block">
-          <FloatChip text="AI · Node 0451" top="22%" left="78%" delay={1.8} />
-          <FloatChip text="Cloud · us-east-1" top="68%" left="82%" delay={2.0} />
-          <FloatChip text="Automation · v2.4" top="74%" left="10%" delay={2.2} />
-          <FloatChip text="Blockchain · L2" top="28%" left="6%" delay={2.4} />
+          <FloatChip text="AI · Node 0451" top="20%" left="78%" delay={1.8} />
+          <FloatChip text="Blockchain · L2" top="38%" left="70%" delay={2.4} />
+          <FloatChip text="Automation · v2.4" top="54%" left="82%" delay={2.2} />
+          <FloatChip text="Cloud · us-east-1" top="72%" left="72%" delay={2.0} />
         </div>
       </div>
 

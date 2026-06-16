@@ -105,10 +105,10 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-6 inset-x-0 z-50 max-w-5xl mx-auto w-[calc(100%-2rem)] rounded-full border transition-all duration-300 flex items-center justify-between shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8),0_0_50px_rgba(212,175,55,0.02)]
+      className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 max-w-5xl w-[calc(100%-2rem)] rounded-full border transition-all duration-300 flex items-center justify-between shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8),0_0_50px_rgba(212,175,55,0.03)]
         ${isScrolled 
-          ? "py-2.5 px-5 bg-black/60 border-[color:var(--border)]/80 backdrop-blur-xl" 
-          : "py-3.5 px-6 bg-black/40 border-[color:var(--border)]/40 backdrop-blur-lg"
+          ? "py-2.5 px-5 bg-black/80 border-gold/30 backdrop-blur-xl" 
+          : "py-3.5 px-6 bg-black/50 border-white/10 backdrop-blur-lg"
         }`}
     >
       {/* Logo */}
@@ -172,7 +172,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -15, scale: 0.96 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="absolute top-full left-0 right-0 mt-3 p-6 rounded-3xl border border-[color:var(--border)] bg-black/90 backdrop-blur-xl flex flex-col gap-4 shadow-2xl z-40 md:hidden"
+            className="absolute top-full left-0 right-0 mt-3 p-6 rounded-3xl border border-white/10 bg-black/95 backdrop-blur-xl flex flex-col gap-4 shadow-2xl z-40 md:hidden"
           >
             {navItems.map((item) => (
               <Link
