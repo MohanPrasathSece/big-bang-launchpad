@@ -185,10 +185,10 @@ function FloatChip({ text, top, left, delay }: { text: string; top: string; left
 /* -------------------------- What We Do (clear value prop) -------------------------- */
 function WhatWeDo() {
   const pillars = [
-    { t: "AI & Automation", d: "LLM apps, agents, and workflow automation that replace repetitive operations.", icon: "◐" },
-    { t: "Custom Software", d: "Web and mobile products engineered for scale, speed and reliability.", icon: "◇" },
-    { t: "Cloud & Data", d: "Resilient infrastructure, data pipelines and analytics on AWS, GCP and Azure.", icon: "◈" },
-    { t: "Security & DevOps", d: "Hardened systems, CI/CD, observability and continuous compliance.", icon: "◉" },
+    { t: "AI & Automation", d: "LLM apps, agents, and workflow automation that replace repetitive operations.", icon: "◐", link: "/services#03" },
+    { t: "Custom Software", d: "Web and mobile products engineered for scale, speed and reliability.", icon: "◇", link: "/services#01" },
+    { t: "Cloud & Data", d: "Resilient infrastructure, data pipelines and analytics on AWS, GCP and Azure.", icon: "◈", link: "/services#04" },
+    { t: "Security & DevOps", d: "Hardened systems, CI/CD, observability and continuous compliance.", icon: "◉", link: "/services#05" },
   ];
   return (
     <section className="px-6 md:px-12 py-32 bg-[color:var(--space-1)] section-divider">
@@ -212,11 +212,13 @@ function WhatWeDo() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {pillars.map((p, i) => (
             <Reveal key={p.t} delay={i * 0.06}>
-              <div className="surface-card p-7 h-full">
-                <div className="text-3xl text-[color:var(--gold)] mb-6 font-display">{p.icon}</div>
-                <h3 className="font-display text-xl font-semibold">{p.t}</h3>
-                <p className="mt-3 text-sm text-[color:var(--muted-foreground)] leading-relaxed">{p.d}</p>
-              </div>
+              <Link to={p.link} className="block h-full group">
+                <div className="surface-card p-7 h-full transition-all duration-300 group-hover:-translate-y-2 group-hover:border-[color:var(--gold)]/40 cursor-pointer">
+                  <div className="text-3xl text-[color:var(--gold)] mb-6 font-display group-hover:scale-110 transition-transform origin-left">{p.icon}</div>
+                  <h3 className="font-display text-xl font-semibold group-hover:text-[color:var(--gold)] transition-colors">{p.t}</h3>
+                  <p className="mt-3 text-sm text-[color:var(--muted-foreground)] leading-relaxed group-hover:text-white/80 transition-colors">{p.d}</p>
+                </div>
+              </Link>
             </Reveal>
           ))}
         </div>

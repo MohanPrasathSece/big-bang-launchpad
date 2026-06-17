@@ -316,7 +316,7 @@ export default function ServicesPage() {
                 </p>
 
                 {/* Bullet Points */}
-                <ul className="grid sm:grid-cols-2 gap-4 text-xs text-white/80">
+                <ul className="grid sm:grid-cols-2 gap-4 text-sm text-white/90 leading-relaxed">
                   {service.features.map((feature, fIndex) => (
                     <li key={fIndex} className="flex gap-2.5 items-start">
                       <span className="text-[color:var(--gold)] text-sm font-bold">✓</span>
@@ -330,7 +330,7 @@ export default function ServicesPage() {
                   {service.stack.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 rounded-full text-[10px] font-mono border border-[color:var(--gold)]/20 bg-white/[0.02] text-white/70"
+                      className="px-3 py-1.5 rounded-full text-xs font-mono border border-[color:var(--gold)]/30 bg-white/[0.03] text-white/80"
                     >
                       {tech}
                     </span>
