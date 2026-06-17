@@ -121,35 +121,7 @@ const VALUES = [
   }
 ];
 
-const TIMELINE = [
-  {
-    y: "2019",
-    t: "Cosmic Spark",
-    d: "Founded as a specialized local automation laboratory. We spent our early cycles writing custom scrapers, database pipelines, and scripts to replace repetitive manual administration tasks."
-  },
-  {
-    y: "2021",
-    t: "Expanding Orbit",
-    d: "Grew into custom web and mobile systems. We partnered with top-tier startup studios to design, ship, and support custom software frameworks capable of serving millions of events daily."
-  },
-  {
-    y: "2023",
-    t: "Intelligence Ascent",
-    d: "Wired foundation models into real operations. We deployed secure, fine-tuned RAG agents, autonomous document processing systems, and predictive data nodes into manufacturing and finance."
-  },
-  {
-    y: "2026",
-    t: "Integrated Studio",
-    d: "Re-structured as a unified technology consultancy under directors Saalim Shaikh and Aveys Shaikh. Nine practices, one delivery team, shipping premium digital cosmos end-to-end."
-  }
-];
 
-const METRICS = [
-  { k: "100%", v: "Code Ownership" },
-  { k: "45ms", v: "Avg Edge Latency" },
-  { k: "SOC2", v: "Hardened Standard" },
-  { k: "24/7", v: "Observability" }
-];
 
 /* -------------------------- Component -------------------------- */
 export default function AboutPage() {
@@ -200,44 +172,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Journey Timeline Section */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 mt-32 section-divider pt-32">
-        <div className="text-eyebrow mb-6 text-center">Our Journey</div>
-        <h2 className="text-section text-center mb-20">Tracing the cosmic trajectory.</h2>
 
-        <div className="relative mt-16 py-8 w-full max-w-4xl mx-auto">
-          {/* Vertical Line */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-[color:var(--gold)]/20 -translate-x-1/2" />
-          
-          <div className="space-y-12">
-            {TIMELINE.map((item, index) => (
-              <div 
-                key={item.y} 
-                className={`relative w-full md:w-1/2 pl-12 md:pl-0 ${index % 2 === 0 ? "md:pr-12 md:ml-0" : "md:pl-12 md:ml-auto"}`}
-              >
-                {/* Dot indicator */}
-                <div className={`absolute w-4 h-4 rounded-full border-2 border-[color:var(--gold)] bg-[color:var(--space-0)] top-8 -left-2 md:left-auto z-10 ${index % 2 === 0 ? "md:-right-2" : "md:-left-2"}`} style={{ boxShadow: "0 0 12px #D4AF37" }} />
-                
-                <Reveal delay={index * 0.1}>
-                  <motion.div 
-                    whileHover={{ y: -4 }}
-                    className="surface-card p-6 md:p-8 text-left"
-                  >
-                    <div className="flex justify-between items-baseline mb-4">
-                      <span className="font-display text-4xl font-bold gold-text leading-none">{item.y}</span>
-                      <span className="text-[10px] text-[color:var(--gold)] tracking-widest font-mono uppercase">Phase 0{index + 1}</span>
-                    </div>
-                    <h3 className="font-display text-2xl font-bold text-white mb-3">{item.t}</h3>
-                    <p className="text-xs md:text-sm text-[color:var(--muted-foreground)] leading-relaxed">
-                      {item.d}
-                    </p>
-                  </motion.div>
-                </Reveal>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Core Values Section */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 mt-32 section-divider pt-32">
@@ -291,17 +226,6 @@ export default function AboutPage() {
                 <p className="text-[11px] text-[color:var(--muted-foreground)] leading-relaxed">{step.d}</p>
               </div>
             </Reveal>
-          ))}
-        </div>
-
-        {/* Big Bang Metrics */}
-        <div className="mt-20 gold-divider" />
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          {METRICS.map((s) => (
-            <div key={s.v}>
-              <div className="font-display text-4xl md:text-5xl gold-text font-bold">{s.k}</div>
-              <div className="mt-2 text-[10px] uppercase tracking-[0.2em] text-[color:var(--muted-foreground)]">{s.v}</div>
-            </div>
           ))}
         </div>
       </section>

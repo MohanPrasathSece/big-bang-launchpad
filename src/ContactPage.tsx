@@ -350,15 +350,12 @@ export default function ContactPage() {
             
             <div className="space-y-6 pt-4">
               {[
-                { city: "Dubai", coords: "25.2048° N, 55.2708° E", details: "Downtown Cosmos Hub" },
-                { city: "Mumbai", coords: "19.0760° N, 72.8777° E", details: "Bandra BKC Lab" },
-                { city: "London", coords: "51.5074° N, 0.1278° W", details: "Canary Wharf Gateway" }
+                { city: "Dubai" },
+                { city: "India" }
               ].map((loc) => (
                 <div key={loc.city} className="flex gap-4 items-start border-l border-[color:var(--gold)]/30 pl-4 py-1">
                   <div>
                     <h4 className="font-display text-lg font-bold text-white leading-tight">{loc.city}</h4>
-                    <div className="text-[10px] font-mono text-[color:var(--gold)] mt-1">{loc.coords}</div>
-                    <div className="text-xs text-[color:var(--muted-foreground)] mt-1">{loc.details}</div>
                   </div>
                 </div>
               ))}

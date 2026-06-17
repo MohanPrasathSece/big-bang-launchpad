@@ -7,16 +7,24 @@ import bbtLogo from "../assets/bbt-logo.png";
 /* -------------------------- Logo -------------------------- */
 export function BigBangMark({ size = 36 }: { size?: number }) {
   return (
-    <motion.img
-      src={bbtLogo}
-      alt="Big Bang Tech Logo"
-      width={size}
-      height={size}
-      className="object-contain"
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-    />
+    <div className="relative flex items-center justify-center">
+      <motion.div
+        className="absolute inset-0 rounded-full bg-[color:var(--gold)] mix-blend-screen"
+        initial={{ scale: 0, opacity: 0.8 }}
+        animate={{ scale: 2.5, opacity: 0 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+      />
+      <motion.img
+        src={bbtLogo}
+        alt="Big Bang Tech Logo"
+        width={size}
+        height={size}
+        className="object-contain relative z-10"
+        initial={{ opacity: 0, scale: 0.2, filter: "brightness(2) blur(10px)" }}
+        animate={{ opacity: 1, scale: [1.2, 0.95, 1], filter: "brightness(1) blur(0px)" }}
+        transition={{ duration: 1.2, ease: "easeOut", times: [0, 0.7, 1] }}
+      />
+    </div>
   );
 }
 

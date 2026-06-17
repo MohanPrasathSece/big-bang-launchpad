@@ -107,10 +107,14 @@ function Hero() {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.1 }}
-          className="text-eyebrow mb-8 flex items-center gap-3"
+          className="text-eyebrow mb-8 flex flex-col sm:flex-row items-center gap-4 justify-center"
         >
-          <span className="w-8 h-px bg-[color:var(--gold)]" />
-          Big Bang Tech Solutions — Est. Cosmos
+          <BigBangMark size={48} />
+          <div className="flex items-center gap-3">
+            <span className="w-8 h-px bg-[color:var(--gold)]" />
+            Big Bang Tech Solutions — Est. Cosmos
+            <span className="w-8 h-px bg-[color:var(--gold)] hidden sm:block" />
+          </div>
         </motion.div>
 
         <SplitHeadline text="Pioneering the tech cosmos." />
@@ -325,50 +329,7 @@ function Story() {
   );
 }
 
-/* -------------------------- Section 4: Founders -------------------------- */
-function Founders() {
-  const founders = [
-    { name: "Aveys Shaikh", role: "Founder & Director", initials: "AS" },
-  ];
-  return (
-    <section id="founders" className="px-6 md:px-12 py-32 bg-[color:var(--space-3)]">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-eyebrow mb-6">03 — Founder</div>
-        <Reveal>
-          <h2 className="text-section max-w-3xl">The architect of the cosmos.</h2>
-        </Reveal>
 
-        <div className="mx-auto mt-16 grid gap-8 max-w-sm">
-          {founders.map((f, i) => (
-            <Reveal key={f.name} delay={i * 0.1}>
-              <motion.div
-                whileHover={{ y: -6 }}
-                transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                className="surface-card p-6 group"
-              >
-                <div className="aspect-square rounded-xl overflow-hidden relative bg-gradient-to-br from-[color:var(--space-2)] to-[color:var(--space-ink)] border border-[color:var(--gold)]/15 max-w-[220px] mx-auto">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="font-display text-[88px] gold-text font-semibold leading-none">
-                      {f.initials}
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 bg-gradient-to-t from-[color:var(--space-ink)]/80 via-transparent to-transparent" />
-                </div>
-                <div className="mt-6 flex items-end justify-between">
-                  <div>
-                    <div className="text-[10px] tracking-[0.28em] uppercase text-[color:var(--gold)]">{f.role}</div>
-                    <h3 className="mt-2 font-display text-2xl">{f.name}</h3>
-                  </div>
-                  <div className="w-10 h-10 rounded-full border border-[color:var(--gold)]/30 flex items-center justify-center text-[color:var(--gold)] text-sm group-hover:bg-[color:var(--gold)] group-hover:text-[color:var(--space-0)] transition-all">→</div>
-                </div>
-              </motion.div>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
 
 /* -------------------------- Mission -------------------------- */
 function Mission() {
@@ -805,7 +766,6 @@ export default function Landing() {
       <Services />
       <Story />
       <TechUniverse />
-      <Founders />
       <Why />
       <Mission />
       <Contact />
