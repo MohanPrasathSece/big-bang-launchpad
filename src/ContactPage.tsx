@@ -1,4 +1,4 @@
-import { motion, useScroll, useSpring, useMotionValue } from "framer-motion";
+﻿import { motion, useScroll, useSpring, useMotionValue } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Navbar, { BigBangMark } from "./components/Navbar";
@@ -115,7 +115,7 @@ function Field({ label, type, name, required = false }: FieldProps) {
       <label
         className={`absolute left-0 transition-all duration-300 pointer-events-none ${
           active
-            ? "top-0 text-xs text-[color:var(--gold)] tracking-[0.2em] uppercase"
+            ? "top-0 text-sm text-[color:var(--gold)] tracking-[0.2em] uppercase"
             : "top-8 text-base text-[color:var(--muted-foreground)]"
         }`}
       >
@@ -159,7 +159,7 @@ function AccordionItem({ question, answer }: { question: string; answer: string 
           {question}
         </span>
         <span className="text-xl text-[color:var(--gold)] ml-4 font-mono select-none">
-          {isOpen ? "âˆ’" : "+"}
+          {isOpen ? "Ã¢Ë†â€™" : "+"}
         </span>
       </button>
       <motion.div
@@ -168,7 +168,7 @@ function AccordionItem({ question, answer }: { question: string; answer: string 
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
         className="overflow-hidden"
       >
-        <p className="pt-4 text-xs md:text-sm text-[color:var(--muted-foreground)] leading-relaxed">
+        <p className="pt-4 text-sm md:text-sm text-[color:var(--muted-foreground)] leading-relaxed">
           {answer}
         </p>
       </motion.div>
@@ -289,7 +289,7 @@ export default function ContactPage() {
             >
               <div className="w-20 h-20 rounded-full border border-[color:var(--gold)] flex items-center justify-center mx-auto relative">
                 <div className="absolute inset-1 rounded-full border border-[color:var(--gold)]/20 animate-ping" />
-                <span className="text-[color:var(--gold)] text-3xl">âœ“</span>
+                <span className="text-[color:var(--gold)] text-3xl">Ã¢Å“â€œ</span>
               </div>
               <h3 className="font-display text-3xl font-bold">Transmission Received</h3>
               <p className="text-[color:var(--muted-foreground)] max-w-md mx-auto text-sm">
@@ -297,7 +297,7 @@ export default function ContactPage() {
               </p>
               <button
                 onClick={() => setSubmitted(false)}
-                className="btn-ghost mt-6 text-xs uppercase tracking-wider"
+                className="btn-ghost mt-6 text-sm uppercase tracking-wider"
               >
                 Send another message
               </button>
@@ -315,7 +315,7 @@ export default function ContactPage() {
               <Field label="Tell us about your project" type="textarea" name="details" required />
               
               <div className="flex items-center justify-between flex-wrap gap-4 pt-6">
-                <p className="text-xs uppercase tracking-[0.25em] text-[color:var(--muted-foreground)]">
+                <p className="text-sm uppercase tracking-[0.25em] text-[color:var(--muted-foreground)]">
                   Response within 24 hours
                 </p>
                 <button
@@ -330,7 +330,7 @@ export default function ContactPage() {
                     </span>
                   ) : (
                     <>
-                      Send transmission <span aria-hidden>â†’</span>
+                      Send transmission <span aria-hidden>Ã¢â€ â€™</span>
                     </>
                   )}
                 </button>
@@ -345,7 +345,7 @@ export default function ContactPage() {
           <div className="space-y-6">
             <div className="text-eyebrow">Cosmic Coordinates</div>
             <h3 className="font-display text-3xl font-semibold">Where we orbit.</h3>
-            <p className="text-xs md:text-sm text-[color:var(--muted-foreground)] leading-relaxed">
+            <p className="text-sm md:text-sm text-[color:var(--muted-foreground)] leading-relaxed">
               While we operate with a distributed cloud-first team, our physical directors operate out of key commercial nodes.
             </p>
             
@@ -365,7 +365,7 @@ export default function ContactPage() {
 
           {/* Digital Channels */}
           <div className="space-y-4 pt-6 border-t border-white/5">
-            <div className="text-xs uppercase tracking-widest text-white/40">Direct Signals</div>
+            <div className="text-sm uppercase tracking-widest text-white/40">Direct Signals</div>
             <div className="space-y-2 text-sm">
               <div className="flex justify-between py-2 border-b border-white/5">
                 <span className="text-[color:var(--muted-foreground)]">General Inquiries</span>
@@ -400,3 +400,4 @@ export default function ContactPage() {
     </main>
   );
 }
+

@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform, useSpring, useMotionValue } from "framer-motion";
+﻿import { motion, useScroll, useTransform, useSpring, useMotionValue } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Navbar, { BigBangMark } from "./components/Navbar";
@@ -142,7 +142,7 @@ function Hero() {
           >
             <a href="#services" className="btn-gold">
               See what we build
-              <span aria-hidden>→</span>
+              <span aria-hidden>â†’</span>
             </a>
             <Link to="/contact" className="btn-ghost">Start a project</Link>
           </motion.div>
@@ -187,9 +187,9 @@ function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.6, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-xs tracking-[0.3em] text-[color:var(--muted-foreground)] uppercase z-10"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-sm tracking-[0.3em] text-[color:var(--muted-foreground)] uppercase z-10"
       >
-        Scroll · the universe expands
+        Scroll Â· the universe expands
       </motion.div>
     </section>
   );
@@ -202,7 +202,7 @@ function FloatChip({ text, top, left, delay }: { text: string; top: string; left
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, delay }}
       style={{ top, left, animation: `float-y ${5 + Math.random() * 3}s ease-in-out infinite` }}
-      className="absolute px-4 py-2 rounded-full text-xs border border-[color:var(--gold)]/30 bg-[color:var(--space-1)]/80 backdrop-blur-md text-[color:var(--gold-champagne)]"
+      className="absolute px-4 py-2 rounded-full text-sm border border-[color:var(--gold)]/30 bg-[color:var(--space-1)]/80 backdrop-blur-md text-[color:var(--gold-champagne)]"
     >
       <span className="inline-block w-1.5 h-1.5 rounded-full bg-[color:var(--gold)] mr-2 align-middle" />
       {text}
@@ -213,10 +213,10 @@ function FloatChip({ text, top, left, delay }: { text: string; top: string; left
 /* -------------------------- What We Do (clear value prop) -------------------------- */
 function WhatWeDo() {
   const pillars = [
-    { t: "AI & Automation", d: "LLM apps, agents, and workflow automation that replace repetitive operations.", icon: "â-", link: "/services#03" },
-    { t: "Custom Software", d: "Web and mobile products engineered for scale, speed and reliability.", icon: "â-‡", link: "/services#01" },
-    { t: "Cloud & Data", d: "Resilient infrastructure, data pipelines and analytics on AWS, GCP and Azure.", icon: "â-ˆ", link: "/services#04" },
-    { t: "Security & DevOps", d: "Hardened systems, CI/CD, observability and continuous compliance.", icon: "â-‰", link: "/services#05" },
+    { t: "AI & Automation", d: "LLM apps, agents, and workflow automation that replace repetitive operations.", icon: "Ã¢-Â", link: "/services#03" },
+    { t: "Custom Software", d: "Web and mobile products engineered for scale, speed and reliability.", icon: "Ã¢-â€¡", link: "/services#01" },
+    { t: "Cloud & Data", d: "Resilient infrastructure, data pipelines and analytics on AWS, GCP and Azure.", icon: "Ã¢-Ë†", link: "/services#04" },
+    { t: "Security & DevOps", d: "Hardened systems, CI/CD, observability and continuous compliance.", icon: "Ã¢-â€°", link: "/services#05" },
   ];
   return (
     <section className="px-6 md:px-12 py-32 bg-[color:var(--space-1)] section-divider">
@@ -287,7 +287,7 @@ function Who() {
               ].map((s) => (
                 <div key={s.v}>
                   <div className="font-display text-4xl md:text-5xl gold-text font-bold">{s.k}</div>
-                  <div className="mt-2 text-xs uppercase tracking-[0.2em] text-[color:var(--muted-foreground)]">{s.v}</div>
+                  <div className="mt-2 text-sm uppercase tracking-[0.2em] text-[color:var(--muted-foreground)]">{s.v}</div>
                 </div>
               ))}
             </div>
@@ -436,7 +436,7 @@ const SERVICES = [
   { n: "06", t: "Big Data", d: "Pipelines, lakehouses and analytics that turn signal into decisions.", img: bigDataImg },
   { n: "07", t: "Revenue Cycle Management", d: "Domain software for healthcare operations and reimbursement workflows.", img: rcmBillingImg },
   { n: "08", t: "Design & Digital Marketing", d: "Brand systems, motion identity and growth engineering, in one place.", img: designMarketingImg },
-  { n: "09", t: "Crypto · Blockchain · Web3", d: "Smart contracts, L2 infrastructure and tokenised product surfaces.", img: blockchainImg },
+  { n: "09", t: "Crypto Â· Blockchain Â· Web3", d: "Smart contracts, L2 infrastructure and tokenised product surfaces.", img: blockchainImg },
 ];
 
 function Services() {
@@ -465,7 +465,7 @@ function Services() {
                   <div>
                     <div className="flex items-start justify-between">
                       <span className="font-display text-sm text-[color:var(--gold)]">{s.n}</span>
-                      <div className="w-10 h-10 rounded-full border border-[color:var(--gold)]/20 flex items-center justify-center text-[color:var(--gold)] group-hover:bg-[color:var(--gold)] group-hover:text-[color:var(--space-0)] transition-all">â†’</div>
+                      <div className="w-10 h-10 rounded-full border border-[color:var(--gold)]/20 flex items-center justify-center text-[color:var(--gold)] group-hover:bg-[color:var(--gold)] group-hover:text-[color:var(--space-0)] transition-all">Ã¢â€ â€™</div>
                     </div>
                     <div className="my-5 aspect-video w-full rounded-lg overflow-hidden border border-white/5 bg-[color:var(--space-ink)] relative flex items-center justify-center">
                       <img src={s.img} alt={s.t} className="object-cover w-full h-full opacity-60 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700" />
@@ -528,7 +528,7 @@ function TechUniverse() {
               className="absolute -translate-x-1/2 -translate-y-1/2"
               style={{ left: `${n.x}%`, top: `${n.y}%` }}
             >
-              <div className={`px-4 py-2 rounded-full border backdrop-blur-md text-xs whitespace-nowrap ${i === 0 ? "bg-[color:var(--gold)] text-[color:var(--space-0)] border-[color:var(--gold)] font-semibold" : "border-[color:var(--gold)]/30 bg-[color:var(--space-1)]/80 text-white"}`}>
+              <div className={`px-4 py-2 rounded-full border backdrop-blur-md text-sm whitespace-nowrap ${i === 0 ? "bg-[color:var(--gold)] text-[color:var(--space-0)] border-[color:var(--gold)] font-semibold" : "border-[color:var(--gold)]/30 bg-[color:var(--space-1)]/80 text-white"}`}>
                 {n.l}
               </div>
               {i === 0 && (
@@ -596,11 +596,11 @@ function Contact() {
               <Field label="Tell us about your project" type="textarea" />
             </div>
             <div className="md:col-span-2 flex items-center justify-between flex-wrap gap-4 pt-6">
-              <p className="text-xs uppercase tracking-[0.25em] text-[color:var(--muted-foreground)]">
+              <p className="text-sm uppercase tracking-[0.25em] text-[color:var(--muted-foreground)]">
                 Reply within 24 hours.
               </p>
               <button type="button" className="btn-gold">
-                Send transmission <span aria-hidden>â†’</span>
+                Send transmission <span aria-hidden>Ã¢â€ â€™</span>
               </button>
             </div>
           </form>
@@ -617,7 +617,7 @@ function Field({ label, type }: { label: string; type: string }) {
   return (
     <div className="relative pt-6">
       <label
-        className={`absolute left-0 transition-all duration-300 pointer-events-none ${active ? "top-0 text-xs text-[color:var(--gold)] tracking-[0.2em] uppercase" : "top-8 text-base text-[color:var(--muted-foreground)]"}`}
+        className={`absolute left-0 transition-all duration-300 pointer-events-none ${active ? "top-0 text-sm text-[color:var(--gold)] tracking-[0.2em] uppercase" : "top-8 text-base text-[color:var(--muted-foreground)]"}`}
       >
         {label}
       </label>
@@ -676,7 +676,7 @@ function FinalCTA() {
         </Reveal>
         <Reveal delay={0.3}>
           <div className="mt-14 flex justify-center gap-4 flex-wrap">
-            <Link to="/contact" className="btn-gold">Start your project â†’</Link>
+            <Link to="/contact" className="btn-gold">Start your project Ã¢â€ â€™</Link>
             <Link to="/contact" className="btn-ghost">Schedule consultation</Link>
           </div>
         </Reveal>
@@ -755,5 +755,6 @@ export default function Landing() {
     </main>
   );
 }
+
 
 

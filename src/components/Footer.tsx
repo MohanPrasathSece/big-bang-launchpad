@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+﻿import { Link } from "react-router-dom";
 import { BigBangMark } from "./Navbar";
 
 export default function Footer() {
@@ -22,13 +22,13 @@ export default function Footer() {
             </p>
             
             <div className="flex gap-4">
-              <Link to="/contact" className="btn-gold py-2 px-6 text-xs">Start a project</Link>
+              <Link to="/contact" className="btn-gold py-2 px-6 text-sm">Start a project</Link>
             </div>
           </div>
 
           <div className="md:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-10">
             <div>
-              <div className="text-[10px] uppercase tracking-[0.3em] text-[color:var(--gold)] mb-6 font-bold">Platform</div>
+              <div className="text-sm uppercase tracking-[0.3em] text-[color:var(--gold)] mb-6 font-bold">Platform</div>
               <ul className="space-y-4 text-sm text-white/70">
                 <li><Link to="/about" className="hover:text-[color:var(--gold)] transition-colors">About the Studio</Link></li>
                 <li><Link to="/services" className="hover:text-[color:var(--gold)] transition-colors">Our Capabilities</Link></li>
@@ -37,7 +37,7 @@ export default function Footer() {
             </div>
             
             <div>
-              <div className="text-[10px] uppercase tracking-[0.3em] text-[color:var(--gold)] mb-6 font-bold">Services</div>
+              <div className="text-sm uppercase tracking-[0.3em] text-[color:var(--gold)] mb-6 font-bold">Services</div>
               <ul className="space-y-4 text-sm text-white/70">
                 <li><Link to="/services" className="hover:text-[color:var(--gold)] transition-colors">AI & Automation</Link></li>
                 <li><Link to="/services" className="hover:text-[color:var(--gold)] transition-colors">Cloud Architecture</Link></li>
@@ -47,7 +47,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <div className="text-[10px] uppercase tracking-[0.3em] text-[color:var(--gold)] mb-6 font-bold">Orbit</div>
+              <div className="text-sm uppercase tracking-[0.3em] text-[color:var(--gold)] mb-6 font-bold">Orbit</div>
               <ul className="space-y-4 text-sm text-white/70">
                 <li><a href="#" className="hover:text-[color:var(--gold)] transition-colors">LinkedIn</a></li>
                 <li><a href="#" className="hover:text-[color:var(--gold)] transition-colors">X / Twitter</a></li>
@@ -57,8 +57,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[11px] text-[color:var(--muted-foreground)] uppercase tracking-[0.2em]">
-          <span>© {new Date().getFullYear()} Big Bang Tech Solutions Pvt Ltd. All rights reserved.</span>
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-[color:var(--muted-foreground)] uppercase tracking-[0.2em]">
+          <span>Â© {new Date().getFullYear()} Big Bang Tech Solutions Pvt Ltd. All rights reserved.</span>
           <div className="flex gap-6">
             <a href="#" className="hover:text-[color:var(--gold)] transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-[color:var(--gold)] transition-colors">Terms of Service</a>
@@ -71,3 +71,4 @@ export default function Footer() {
     </footer>
   );
 }
+

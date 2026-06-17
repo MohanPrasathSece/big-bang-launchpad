@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform, useSpring, useMotionValue } from "framer-motion";
+﻿import { motion, useScroll, useTransform, useSpring, useMotionValue } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Navbar, { BigBangMark } from "./components/Navbar";
@@ -103,22 +103,22 @@ const VALUES = [
   {
     t: "Precision Engineering",
     d: "We reject bloated frameworks and quick shortcuts. Every line of code, database query, and CSS rule is crafted with long-term compile and scale resilience in mind.",
-    icon: "â-"
+    icon: "Ã¢-Â"
   },
   {
     t: "Autonomous Leverage",
     d: "We map artificial intelligence directly into background tasks. By automating repeatable workflows, we provide companies with extreme operational throughput.",
-    icon: "â-‡"
+    icon: "Ã¢-â€¡"
   },
   {
     t: "Hardened security",
     d: "Data boundaries are sacred. We build secure encryption structures, enforce vault protocols, and prepare your tech stack for SoC2 or HIPAA compliance out of the box.",
-    icon: "â-‰"
+    icon: "Ã¢-â€°"
   },
   {
     t: "Radical Transparency",
     d: "No intermediate project managers, sales fluff, or consulting jargon. You speak directly with engineers who write your software, with live pipeline updates daily.",
-    icon: "â-ˆ"
+    icon: "Ã¢-Ë†"
   }
 ];
 
@@ -200,7 +200,7 @@ export default function AboutPage() {
                 <div>
                   <div className="text-3xl text-[color:var(--gold)] mb-6 font-display">{val.icon}</div>
                   <h3 className="font-display text-2xl font-semibold text-white">{val.t}</h3>
-                  <p className="mt-4 text-xs md:text-sm text-[color:var(--muted-foreground)] leading-relaxed">{val.d}</p>
+                  <p className="mt-4 text-sm md:text-sm text-[color:var(--muted-foreground)] leading-relaxed">{val.d}</p>
                 </div>
               </div>
             </Reveal>
@@ -235,3 +235,4 @@ export default function AboutPage() {
     </main>
   );
 }
+

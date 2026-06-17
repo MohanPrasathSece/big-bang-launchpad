@@ -101,7 +101,7 @@ export default function Navbar() {
       </Link>
 
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-center gap-8 text-xs font-medium uppercase tracking-wider">
+      <nav className="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-wider">
         {navItems.map((item) => (
           <Link
             key={item.label}
@@ -129,7 +129,7 @@ export default function Navbar() {
       <div className="hidden md:block">
         <Link
           to="/contact"
-          className="btn-gold !py-2.5 !px-5 text-xs tracking-wide uppercase"
+          className="btn-gold !py-2.5 !px-5 text-sm tracking-wide uppercase"
         >
           Start a project
         </Link>
@@ -174,7 +174,7 @@ export default function Navbar() {
             <Link
               to="/contact"
               onClick={() => setIsOpen(false)}
-              className="btn-gold justify-center text-center w-full !py-3 text-xs tracking-wide uppercase mt-2"
+              className="btn-gold justify-center text-center w-full !py-3 text-sm tracking-wide uppercase mt-2"
             >
               Start a project
             </Link>
@@ -184,4 +184,5 @@ export default function Navbar() {
     </header>
   );
 }
+
 

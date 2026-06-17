@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform, useSpring, useMotionValue } from "framer-motion";
+﻿import { motion, useScroll, useTransform, useSpring, useMotionValue } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Navbar, { BigBangMark } from "./components/Navbar";
@@ -211,7 +211,7 @@ const SERVICES_DETAILS = [
   },
   {
     id: "09",
-    title: "Crypto · Blockchain · Web3",
+    title: "Crypto Â· Blockchain Â· Web3",
     tagline: "Audited smart contracts and decentralised networks.",
     desc: "We construct secure smart contracts, custom Layer 2 integrations, and decentralized financial products. We engineer token economies with rigorous auditing and security controls built into the dev loop.",
     stack: ["Solidity", "Rust", "Hardhat", "Ethers.js", "Polygon", "Arbitrum"],
@@ -304,7 +304,7 @@ export default function ServicesPage() {
                     {service.id}
                   </span>
                   <div className="w-10 h-px bg-[color:var(--gold)]/40" />
-                  <span className="text-xs uppercase tracking-widest text-white/40">Capability</span>
+                  <span className="text-sm uppercase tracking-widest text-white/40">Capability</span>
                 </div>
                 <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-white">
                   {service.title}
@@ -320,7 +320,7 @@ export default function ServicesPage() {
                 <ul className="grid sm:grid-cols-2 gap-4 text-sm text-white/90 leading-relaxed">
                   {service.features.map((feature, fIndex) => (
                     <li key={fIndex} className="flex gap-2.5 items-start">
-                      <span className="text-[color:var(--gold)] text-sm font-bold">âœ“</span>
+                      <span className="text-[color:var(--gold)] text-sm font-bold">Ã¢Å“â€œ</span>
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -331,7 +331,7 @@ export default function ServicesPage() {
                   {service.stack.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1.5 rounded-full text-xs font-mono border border-[color:var(--gold)]/30 bg-white/[0.03] text-white/80"
+                      className="px-3 py-1.5 rounded-full text-sm font-mono border border-[color:var(--gold)]/30 bg-white/[0.03] text-white/80"
                     >
                       {tech}
                     </span>
@@ -367,3 +367,4 @@ export default function ServicesPage() {
     </main>
   );
 }
+
