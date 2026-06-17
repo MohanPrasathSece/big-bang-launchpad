@@ -1,4 +1,4 @@
-﻿import { motion, useScroll, useSpring, useMotionValue } from "framer-motion";
+import { motion, useScroll, useSpring, useMotionValue } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Navbar, { BigBangMark } from "./components/Navbar";
@@ -159,7 +159,7 @@ function AccordionItem({ question, answer }: { question: string; answer: string 
           {question}
         </span>
         <span className="text-xl text-[color:var(--gold)] ml-4 font-mono select-none">
-          {isOpen ? "Ã¢Ë†â€™" : "+"}
+          {isOpen ? "−" : "+"}
         </span>
       </button>
       <motion.div
@@ -289,7 +289,7 @@ export default function ContactPage() {
             >
               <div className="w-20 h-20 rounded-full border border-[color:var(--gold)] flex items-center justify-center mx-auto relative">
                 <div className="absolute inset-1 rounded-full border border-[color:var(--gold)]/20 animate-ping" />
-                <span className="text-[color:var(--gold)] text-3xl">Ã¢Å“â€œ</span>
+                <span className="text-[color:var(--gold)] text-3xl">✓</span>
               </div>
               <h3 className="font-display text-3xl font-bold">Transmission Received</h3>
               <p className="text-[color:var(--muted-foreground)] max-w-md mx-auto text-[15px]">
@@ -330,7 +330,7 @@ export default function ContactPage() {
                     </span>
                   ) : (
                     <>
-                      Send transmission <span aria-hidden>Ã¢â€ â€™</span>
+                      Send transmission <span aria-hidden>→</span>
                     </>
                   )}
                 </button>

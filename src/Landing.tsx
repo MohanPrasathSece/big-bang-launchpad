@@ -1,4 +1,4 @@
-﻿import { motion, useScroll, useTransform, useSpring, useMotionValue } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring, useMotionValue } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Navbar, { BigBangMark } from "./components/Navbar";
@@ -213,10 +213,10 @@ function FloatChip({ text, top, left, delay }: { text: string; top: string; left
 /* -------------------------- What We Do (clear value prop) -------------------------- */
 function WhatWeDo() {
   const pillars = [
-    { t: "AI & Automation", d: "LLM apps, agents, and workflow automation that replace repetitive operations.", icon: "Ã¢-Â", link: "/services#03" },
-    { t: "Custom Software", d: "Web and mobile products engineered for scale, speed and reliability.", icon: "Ã¢-â€¡", link: "/services#01" },
-    { t: "Cloud & Data", d: "Resilient infrastructure, data pipelines and analytics on AWS, GCP and Azure.", icon: "Ã¢-Ë†", link: "/services#04" },
-    { t: "Security & DevOps", d: "Hardened systems, CI/CD, observability and continuous compliance.", icon: "Ã¢-â€°", link: "/services#05" },
+    { t: "AI & Automation", d: "LLM apps, agents, and workflow automation that replace repetitive operations.", icon: "✦", link: "/services#03" },
+    { t: "Custom Software", d: "Web and mobile products engineered for scale, speed and reliability.", icon: "⌘", link: "/services#01" },
+    { t: "Cloud & Data", d: "Resilient infrastructure, data pipelines and analytics on AWS, GCP and Azure.", icon: "⎈", link: "/services#04" },
+    { t: "Security & DevOps", d: "Hardened systems, CI/CD, observability and continuous compliance.", icon: "⌖", link: "/services#05" },
   ];
   return (
     <section className="px-6 md:px-12 py-32 bg-[color:var(--space-1)] section-divider">
@@ -465,7 +465,7 @@ function Services() {
                   <div>
                     <div className="flex items-start justify-between">
                       <span className="font-display text-[15px] text-[color:var(--gold)]">{s.n}</span>
-                      <div className="w-10 h-10 rounded-full border border-[color:var(--gold)]/20 flex items-center justify-center text-[color:var(--gold)] group-hover:bg-[color:var(--gold)] group-hover:text-[color:var(--space-0)] transition-all">Ã¢â€ â€™</div>
+                      <div className="w-10 h-10 rounded-full border border-[color:var(--gold)]/20 flex items-center justify-center text-[color:var(--gold)] group-hover:bg-[color:var(--gold)] group-hover:text-[color:var(--space-0)] transition-all">→</div>
                     </div>
                     <div className="my-5 aspect-video w-full rounded-lg overflow-hidden border border-white/5 bg-[color:var(--space-ink)] relative flex items-center justify-center">
                       <img src={s.img} alt={s.t} className="object-cover w-full h-full opacity-60 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700" />
@@ -600,7 +600,7 @@ function Contact() {
                 Reply within 24 hours.
               </p>
               <button type="button" className="btn-gold">
-                Send transmission <span aria-hidden>Ã¢â€ â€™</span>
+                Send transmission <span aria-hidden>→</span>
               </button>
             </div>
           </form>
@@ -676,7 +676,7 @@ function FinalCTA() {
         </Reveal>
         <Reveal delay={0.3}>
           <div className="mt-14 flex justify-center gap-4 flex-wrap">
-            <Link to="/contact" className="btn-gold">Start your project Ã¢â€ â€™</Link>
+            <Link to="/contact" className="btn-gold">Start your project →</Link>
             <Link to="/contact" className="btn-ghost">Schedule consultation</Link>
           </div>
         </Reveal>
