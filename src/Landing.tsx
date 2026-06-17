@@ -101,44 +101,93 @@ function SplitHeadline({ text }: { text: string }) {
 /* -------------------------- Hero -------------------------- */
 function Hero() {
   return (
-    <section id="top" className="relative min-h-screen pt-32 px-6 md:px-12 flex flex-col justify-center noise">
+    <section id="top" className="relative min-h-screen pt-32 px-6 md:px-12 flex flex-col justify-center noise overflow-hidden">
       <CosmicSystem />
-      <div className="max-w-7xl mx-auto w-full">
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.1 }}
-          className="text-eyebrow mb-8 flex flex-col sm:flex-row items-center gap-4 justify-center"
-        >
-          <BigBangMark size={80} />
-          <div className="flex items-center gap-3">
+      <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
+        {/* Left Side Content */}
+        <div className="relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.1 }}
+            className="text-eyebrow mb-8 flex items-center gap-3"
+          >
             <span className="w-8 h-px bg-[color:var(--gold)]" />
             Big Bang Tech Solutions - Est. Cosmos
-            <span className="w-8 h-px bg-[color:var(--gold)] hidden sm:block" />
-          </div>
-        </motion.div>
+          </motion.div>
 
-        <SplitHeadline text="Pioneering the tech cosmos." />
+          <SplitHeadline text="Pioneering the tech cosmos." />
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.5 }}
-          className="mt-12 flex flex-wrap gap-4"
-        >
-          <a href="#services" className="btn-gold">
-            See what we build
-            <span aria-hidden>â†’</span>
-          </a>
-          <Link to="/contact" className="btn-ghost">Start a project</Link>
-        </motion.div>
+          <motion.div
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 1.6, delay: 1.1, ease: [0.22, 1, 0.36, 1] }}
+            className="mt-8 h-px bg-gradient-to-r from-[color:var(--gold)] via-[color:var(--gold-champagne)] to-transparent origin-left max-w-md"
+          />
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.3 }}
+            className="mt-8 text-[color:var(--muted-foreground)] text-lg leading-relaxed max-w-lg"
+          >
+            We are a technology consultancy that designs, builds and ships AI products, custom software, cloud platforms and automation systems for startups and enterprises - end to end, under one roof.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1.5 }}
+            className="mt-12 flex flex-wrap gap-4"
+          >
+            <a href="#services" className="btn-gold">
+              See what we build
+              <span aria-hidden>→</span>
+            </a>
+            <Link to="/contact" className="btn-ghost">Start a project</Link>
+          </motion.div>
+        </div>
+
+        {/* Right Side Logo */}
+        <div className="relative h-full min-h-[300px] lg:min-h-[500px] flex items-center justify-center pointer-events-none mt-12 lg:mt-0">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5, rotate: -20 }}
+            animate={{ opacity: 1, scale: 1, rotate: 0 }}
+            transition={{ duration: 2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+            className="relative"
+          >
+            {/* Pulsing ring 1 */}
+            <motion.div 
+              animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.1, 0.3] }}
+              transition={{ duration: 4, ease: "easeInOut", repeat: Infinity }}
+              className="absolute inset-0 bg-[color:var(--gold)] rounded-full blur-[80px] -z-10" 
+            />
+            {/* Orbiting element */}
+            <motion.div
+              animate={{ rotate: 360 }}
+              transition={{ duration: 20, ease: "linear", repeat: Infinity }}
+              className="absolute -inset-[100px] border border-[color:var(--gold)]/10 rounded-full border-dashed -z-10"
+            />
+            <motion.div
+              animate={{ rotate: -360 }}
+              transition={{ duration: 30, ease: "linear", repeat: Infinity }}
+              className="absolute -inset-[150px] border border-[color:var(--gold)]/5 rounded-full -z-10"
+            />
+            <div className="hidden lg:block">
+              <BigBangMark size={400} />
+            </div>
+            <div className="block lg:hidden">
+              <BigBangMark size={240} />
+            </div>
+          </motion.div>
+        </div>
       </div>
 
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.6, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-xs tracking-[0.3em] text-[color:var(--muted-foreground)] uppercase"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-xs tracking-[0.3em] text-[color:var(--muted-foreground)] uppercase z-10"
       >
         Scroll · the universe expands
       </motion.div>
