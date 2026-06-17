@@ -187,7 +187,7 @@ function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.6, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-sm tracking-[0.3em] text-[color:var(--muted-foreground)] uppercase z-10"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-[15px] tracking-[0.3em] text-[color:var(--muted-foreground)] uppercase z-10"
       >
         Scroll Â· the universe expands
       </motion.div>
@@ -202,7 +202,7 @@ function FloatChip({ text, top, left, delay }: { text: string; top: string; left
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1, delay }}
       style={{ top, left, animation: `float-y ${5 + Math.random() * 3}s ease-in-out infinite` }}
-      className="absolute px-4 py-2 rounded-full text-sm border border-[color:var(--gold)]/30 bg-[color:var(--space-1)]/80 backdrop-blur-md text-[color:var(--gold-champagne)]"
+      className="absolute px-4 py-2 rounded-full text-[15px] border border-[color:var(--gold)]/30 bg-[color:var(--space-1)]/80 backdrop-blur-md text-[color:var(--gold-champagne)]"
     >
       <span className="inline-block w-1.5 h-1.5 rounded-full bg-[color:var(--gold)] mr-2 align-middle" />
       {text}
@@ -244,7 +244,7 @@ function WhatWeDo() {
                 <div className="surface-card p-7 h-full transition-all duration-300 group-hover:-translate-y-2 group-hover:border-[color:var(--gold)]/40 cursor-pointer">
                   <div className="text-3xl text-[color:var(--gold)] mb-6 font-display group-hover:scale-110 transition-transform origin-left">{p.icon}</div>
                   <h3 className="font-display text-xl font-semibold group-hover:text-[color:var(--gold)] transition-colors">{p.t}</h3>
-                  <p className="mt-3 text-sm text-[color:var(--muted-foreground)] leading-relaxed group-hover:text-white/80 transition-colors">{p.d}</p>
+                  <p className="mt-3 text-[15px] text-[color:var(--muted-foreground)] leading-relaxed group-hover:text-white/80 transition-colors">{p.d}</p>
                 </div>
               </Link>
             </Reveal>
@@ -287,7 +287,7 @@ function Who() {
               ].map((s) => (
                 <div key={s.v}>
                   <div className="font-display text-4xl md:text-5xl gold-text font-bold">{s.k}</div>
-                  <div className="mt-2 text-sm uppercase tracking-[0.2em] text-[color:var(--muted-foreground)]">{s.v}</div>
+                  <div className="mt-2 text-[15px] uppercase tracking-[0.2em] text-[color:var(--muted-foreground)]">{s.v}</div>
                 </div>
               ))}
             </div>
@@ -404,7 +404,7 @@ function Skills() {
           {skills.map((s, i) => (
             <Reveal key={s.name} delay={i * 0.05}>
               <div>
-                <div className="flex justify-between text-sm mb-3">
+                <div className="flex justify-between text-[15px] mb-3">
                   <span className="font-medium">{s.name}</span>
                   <span className="text-[color:var(--gold)] font-display">{s.v}%</span>
                 </div>
@@ -464,7 +464,7 @@ function Services() {
                 >
                   <div>
                     <div className="flex items-start justify-between">
-                      <span className="font-display text-sm text-[color:var(--gold)]">{s.n}</span>
+                      <span className="font-display text-[15px] text-[color:var(--gold)]">{s.n}</span>
                       <div className="w-10 h-10 rounded-full border border-[color:var(--gold)]/20 flex items-center justify-center text-[color:var(--gold)] group-hover:bg-[color:var(--gold)] group-hover:text-[color:var(--space-0)] transition-all">Ã¢â€ â€™</div>
                     </div>
                     <div className="my-5 aspect-video w-full rounded-lg overflow-hidden border border-white/5 bg-[color:var(--space-ink)] relative flex items-center justify-center">
@@ -473,7 +473,7 @@ function Services() {
                   </div>
                   <div>
                     <h3 className="font-display text-3xl font-bold tracking-tight">{s.t}</h3>
-                    <p className="mt-4 text-sm text-[color:var(--muted-foreground)] leading-relaxed">{s.d}</p>
+                    <p className="mt-4 text-[15px] text-[color:var(--muted-foreground)] leading-relaxed">{s.d}</p>
                   </div>
                 </motion.div>
               </Link>
@@ -528,7 +528,7 @@ function TechUniverse() {
               className="absolute -translate-x-1/2 -translate-y-1/2"
               style={{ left: `${n.x}%`, top: `${n.y}%` }}
             >
-              <div className={`px-4 py-2 rounded-full border backdrop-blur-md text-sm whitespace-nowrap ${i === 0 ? "bg-[color:var(--gold)] text-[color:var(--space-0)] border-[color:var(--gold)] font-semibold" : "border-[color:var(--gold)]/30 bg-[color:var(--space-1)]/80 text-white"}`}>
+              <div className={`px-4 py-2 rounded-full border backdrop-blur-md text-[15px] whitespace-nowrap ${i === 0 ? "bg-[color:var(--gold)] text-[color:var(--space-0)] border-[color:var(--gold)] font-semibold" : "border-[color:var(--gold)]/30 bg-[color:var(--space-1)]/80 text-white"}`}>
                 {n.l}
               </div>
               {i === 0 && (
@@ -561,7 +561,7 @@ function Why() {
               <div className="py-10 grid md:grid-cols-12 gap-6 items-center group hover:bg-white/[0.02] transition-colors px-2">
                 <div className="md:col-span-2 font-display text-[color:var(--gold)]">0{i + 1}</div>
                 <div className="md:col-span-7 font-display text-3xl md:text-5xl font-bold group-hover:text-[color:var(--gold)] transition-colors">{t}</div>
-                <div className="md:col-span-3 text-sm text-[color:var(--muted-foreground)]">
+                <div className="md:col-span-3 text-[15px] text-[color:var(--muted-foreground)]">
                   Engineered into every engagement, by default.
                 </div>
               </div>
@@ -596,7 +596,7 @@ function Contact() {
               <Field label="Tell us about your project" type="textarea" />
             </div>
             <div className="md:col-span-2 flex items-center justify-between flex-wrap gap-4 pt-6">
-              <p className="text-sm uppercase tracking-[0.25em] text-[color:var(--muted-foreground)]">
+              <p className="text-[15px] uppercase tracking-[0.25em] text-[color:var(--muted-foreground)]">
                 Reply within 24 hours.
               </p>
               <button type="button" className="btn-gold">
@@ -617,7 +617,7 @@ function Field({ label, type }: { label: string; type: string }) {
   return (
     <div className="relative pt-6">
       <label
-        className={`absolute left-0 transition-all duration-300 pointer-events-none ${active ? "top-0 text-sm text-[color:var(--gold)] tracking-[0.2em] uppercase" : "top-8 text-base text-[color:var(--muted-foreground)]"}`}
+        className={`absolute left-0 transition-all duration-300 pointer-events-none ${active ? "top-0 text-[15px] text-[color:var(--gold)] tracking-[0.2em] uppercase" : "top-8 text-base text-[color:var(--muted-foreground)]"}`}
       >
         {label}
       </label>
@@ -755,6 +755,7 @@ export default function Landing() {
     </main>
   );
 }
+
 
 
 

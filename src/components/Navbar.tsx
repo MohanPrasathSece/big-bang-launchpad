@@ -101,7 +101,7 @@ export default function Navbar() {
       </Link>
 
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-center gap-8 text-sm font-medium uppercase tracking-wider">
+      <nav className="hidden md:flex items-center gap-8 text-[15px] font-medium uppercase tracking-wider">
         {navItems.map((item) => (
           <Link
             key={item.label}
@@ -129,7 +129,7 @@ export default function Navbar() {
       <div className="hidden md:block">
         <Link
           to="/contact"
-          className="btn-gold !py-2.5 !px-5 text-sm tracking-wide uppercase"
+          className="btn-gold !py-2.5 !px-5 text-[15px] tracking-wide uppercase"
         >
           Start a project
         </Link>
@@ -162,7 +162,7 @@ export default function Navbar() {
                   setIsOpen(false);
                   handleLinkClick(e, item.href);
                 }}
-                className={`text-sm font-semibold uppercase tracking-widest py-2.5 border-b border-white/5 transition-colors ${
+                className={`text-[15px] font-semibold uppercase tracking-widest py-2.5 border-b border-white/5 transition-colors ${
                   isActive(item.href)
                     ? "text-[color:var(--gold)]"
                     : "text-[color:var(--muted-foreground)] hover:text-white"
@@ -174,7 +174,7 @@ export default function Navbar() {
             <Link
               to="/contact"
               onClick={() => setIsOpen(false)}
-              className="btn-gold justify-center text-center w-full !py-3 text-sm tracking-wide uppercase mt-2"
+              className="btn-gold justify-center text-center w-full !py-3 text-[15px] tracking-wide uppercase mt-2"
             >
               Start a project
             </Link>
@@ -184,5 +184,6 @@ export default function Navbar() {
     </header>
   );
 }
+
 
 

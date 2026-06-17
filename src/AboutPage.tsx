@@ -187,7 +187,7 @@ export default function AboutPage() {
             </Reveal>
           </div>
           <div className="md:col-span-5">
-            <p className="text-[color:var(--muted-foreground)] text-sm md:text-base leading-relaxed">
+            <p className="text-[color:var(--muted-foreground)] text-[15px] md:text-base leading-relaxed">
               We anchor our consultancy in transparent communication, strict architectural discipline, and high-fidelity product output.
             </p>
           </div>
@@ -200,7 +200,7 @@ export default function AboutPage() {
                 <div>
                   <div className="text-3xl text-[color:var(--gold)] mb-6 font-display">{val.icon}</div>
                   <h3 className="font-display text-2xl font-semibold text-white">{val.t}</h3>
-                  <p className="mt-4 text-sm md:text-sm text-[color:var(--muted-foreground)] leading-relaxed">{val.d}</p>
+                  <p className="mt-4 text-[15px] md:text-[15px] text-[color:var(--muted-foreground)] leading-relaxed">{val.d}</p>
                 </div>
               </div>
             </Reveal>
@@ -222,9 +222,9 @@ export default function AboutPage() {
           ].map((step, i) => (
             <Reveal key={step.n} delay={i * 0.05}>
               <div className="bg-white/[0.01] border border-white/5 p-8 rounded-xl relative group hover:border-[color:var(--gold)]/20 transition-colors h-full">
-                <div className="font-display text-sm text-[color:var(--gold)] font-bold mb-4 tracking-wider">{step.n}</div>
+                <div className="font-display text-[15px] text-[color:var(--gold)] font-bold mb-4 tracking-wider">{step.n}</div>
                 <h4 className="font-display text-xl font-bold text-white mb-3">{step.t}</h4>
-                <p className="text-sm md:text-base text-[color:var(--muted-foreground)] leading-relaxed">{step.d}</p>
+                <p className="text-[15px] md:text-base text-[color:var(--muted-foreground)] leading-relaxed">{step.d}</p>
               </div>
             </Reveal>
           ))}
@@ -235,4 +235,5 @@ export default function AboutPage() {
     </main>
   );
 }
+
 

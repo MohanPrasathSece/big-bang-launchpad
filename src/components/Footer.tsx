@@ -17,19 +17,19 @@ export default function Footer() {
                 Big Bang<span className="text-[color:var(--gold)] group-hover:text-white transition-colors">.</span>
               </span>
             </Link>
-            <p className="text-[color:var(--muted-foreground)] text-sm md:text-base leading-relaxed max-w-sm mb-10">
+            <p className="text-[color:var(--muted-foreground)] text-[15px] md:text-base leading-relaxed max-w-sm mb-10">
               A premium technology studio engineering intelligent systems, robust software, and autonomous agents for the boldest enterprises on earth.
             </p>
             
             <div className="flex gap-4">
-              <Link to="/contact" className="btn-gold py-2 px-6 text-sm">Start a project</Link>
+              <Link to="/contact" className="btn-gold py-2 px-6 text-[15px]">Start a project</Link>
             </div>
           </div>
 
           <div className="md:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-10">
             <div>
-              <div className="text-sm uppercase tracking-[0.3em] text-[color:var(--gold)] mb-6 font-bold">Platform</div>
-              <ul className="space-y-4 text-sm text-white/70">
+              <div className="text-[15px] uppercase tracking-[0.3em] text-[color:var(--gold)] mb-6 font-bold">Platform</div>
+              <ul className="space-y-4 text-[15px] text-white/70">
                 <li><Link to="/about" className="hover:text-[color:var(--gold)] transition-colors">About the Studio</Link></li>
                 <li><Link to="/services" className="hover:text-[color:var(--gold)] transition-colors">Our Capabilities</Link></li>
                 <li><Link to="/contact" className="hover:text-[color:var(--gold)] transition-colors">Contact Us</Link></li>
@@ -37,8 +37,8 @@ export default function Footer() {
             </div>
             
             <div>
-              <div className="text-sm uppercase tracking-[0.3em] text-[color:var(--gold)] mb-6 font-bold">Services</div>
-              <ul className="space-y-4 text-sm text-white/70">
+              <div className="text-[15px] uppercase tracking-[0.3em] text-[color:var(--gold)] mb-6 font-bold">Services</div>
+              <ul className="space-y-4 text-[15px] text-white/70">
                 <li><Link to="/services" className="hover:text-[color:var(--gold)] transition-colors">AI & Automation</Link></li>
                 <li><Link to="/services" className="hover:text-[color:var(--gold)] transition-colors">Cloud Architecture</Link></li>
                 <li><Link to="/services" className="hover:text-[color:var(--gold)] transition-colors">Custom Software</Link></li>
@@ -47,8 +47,8 @@ export default function Footer() {
             </div>
 
             <div>
-              <div className="text-sm uppercase tracking-[0.3em] text-[color:var(--gold)] mb-6 font-bold">Orbit</div>
-              <ul className="space-y-4 text-sm text-white/70">
+              <div className="text-[15px] uppercase tracking-[0.3em] text-[color:var(--gold)] mb-6 font-bold">Orbit</div>
+              <ul className="space-y-4 text-[15px] text-white/70">
                 <li><a href="#" className="hover:text-[color:var(--gold)] transition-colors">LinkedIn</a></li>
                 <li><a href="#" className="hover:text-[color:var(--gold)] transition-colors">X / Twitter</a></li>
                 <li><a href="#" className="hover:text-[color:var(--gold)] transition-colors">GitHub</a></li>
@@ -57,7 +57,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-[color:var(--muted-foreground)] uppercase tracking-[0.2em]">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[15px] text-[color:var(--muted-foreground)] uppercase tracking-[0.2em]">
           <span>Â© {new Date().getFullYear()} Big Bang Tech Solutions Pvt Ltd. All rights reserved.</span>
           <div className="flex gap-6">
             <a href="#" className="hover:text-[color:var(--gold)] transition-colors">Privacy Policy</a>
@@ -71,4 +71,5 @@ export default function Footer() {
     </footer>
   );
 }
+
 
