@@ -143,7 +143,7 @@ function Hero() {
             See what we build
             <span aria-hidden>→</span>
           </a>
-          <a href="#contact" className="btn-ghost">Start a project</a>
+          <Link to="/contact" className="btn-ghost">Start a project</Link>
         </motion.div>
 
         {/* Floating chip cards */}
@@ -326,18 +326,17 @@ function Story() {
 /* -------------------------- Section 4: Founders -------------------------- */
 function Founders() {
   const founders = [
-    { name: "Saalim Shaikh", role: "Co-Founder & Director", initials: "SS" },
     { name: "Aveys Shaikh", role: "Founder & Director", initials: "AS" },
   ];
   return (
     <section id="founders" className="px-6 md:px-12 py-32 bg-[color:var(--space-3)]">
       <div className="max-w-6xl mx-auto">
-        <div className="text-eyebrow mb-6">03 — Founders</div>
+        <div className="text-eyebrow mb-6">03 — Founder</div>
         <Reveal>
-          <h2 className="text-section max-w-3xl">The architects of the cosmos.</h2>
+          <h2 className="text-section max-w-3xl">The architect of the cosmos.</h2>
         </Reveal>
 
-        <div className="mx-auto mt-16 grid sm:grid-cols-2 gap-8 max-w-3xl">
+        <div className="mx-auto mt-16 grid gap-8 max-w-sm">
           {founders.map((f, i) => (
             <Reveal key={f.name} delay={i * 0.1}>
               <motion.div
@@ -690,8 +689,8 @@ function FinalCTA() {
         </Reveal>
         <Reveal delay={0.3}>
           <div className="mt-14 flex justify-center gap-4 flex-wrap">
-            <a href="#contact" className="btn-gold">Start your project →</a>
-            <a href="#contact" className="btn-ghost">Schedule consultation</a>
+            <Link to="/contact" className="btn-gold">Start your project →</Link>
+            <Link to="/contact" className="btn-ghost">Schedule consultation</Link>
           </div>
         </Reveal>
       </div>
@@ -717,11 +716,9 @@ function Footer() {
           <div className="md:col-span-3">
             <div className="text-eyebrow mb-6">Navigate</div>
             <ul className="space-y-3 text-sm">
-              {["About", "Services", "Founders", "Contact"].map((l) => (
-                <li key={l}>
-                  <a href={`#${l.toLowerCase()}`} className="text-white/80 hover:text-[color:var(--gold)] transition">{l}</a>
-                </li>
-              ))}
+              <li><Link to="/about" className="text-white/80 hover:text-[color:var(--gold)] transition">About</Link></li>
+              <li><Link to="/services" className="text-white/80 hover:text-[color:var(--gold)] transition">Services</Link></li>
+              <li><Link to="/contact" className="text-white/80 hover:text-[color:var(--gold)] transition">Contact</Link></li>
             </ul>
           </div>
           <div className="md:col-span-3">

@@ -371,7 +371,7 @@ export default function ServicesPage() {
             Select a custom stack, automate redundant structures, or launch a fresh digital product. We take it from diagram to deployment.
           </p>
           <div className="mt-10 flex justify-center gap-4 flex-wrap">
-            <a href="/#contact" className="btn-gold">Start your project →</a>
+            <Link to="/contact" className="btn-gold">Start your project →</Link>
             <Link to="/" className="btn-ghost">Back to home</Link>
           </div>
         </div>

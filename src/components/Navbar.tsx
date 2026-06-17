@@ -2,47 +2,21 @@ import { motion, AnimatePresence } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import bbtLogo from "../assets/bbt-logo.png";
 
 /* -------------------------- Logo -------------------------- */
 export function BigBangMark({ size = 36 }: { size?: number }) {
   return (
-    <motion.svg
+    <motion.img
+      src={bbtLogo}
+      alt="Big Bang Tech Logo"
       width={size}
       height={size}
-      viewBox="0 0 64 64"
-      fill="none"
-      initial={{ rotate: -90, opacity: 0, scale: 0.6 }}
-      animate={{ rotate: 0, opacity: 1, scale: 1 }}
+      className="object-contain"
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-    >
-      <defs>
-        <radialGradient id="bg" cx="50%" cy="50%" r="50%">
-          <stop offset="0%" stopColor="#E6C76B" />
-          <stop offset="60%" stopColor="#D4AF37" />
-          <stop offset="100%" stopColor="#B8941F" />
-        </radialGradient>
-      </defs>
-      <motion.circle
-        cx="32" cy="32" r="4" fill="url(#bg)"
-        animate={{ scale: [1, 1.15, 1] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.circle
-        cx="32" cy="32" r="14" stroke="#D4AF37" strokeWidth="0.7" fill="none"
-        animate={{ rotate: 360 }} transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
-        style={{ transformOrigin: "32px 32px" }}
-      />
-      <motion.ellipse
-        cx="32" cy="32" rx="26" ry="10" stroke="#D4AF37" strokeWidth="0.5" fill="none" opacity="0.7"
-        animate={{ rotate: -360 }} transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
-        style={{ transformOrigin: "32px 32px" }}
-      />
-      <motion.ellipse
-        cx="32" cy="32" rx="10" ry="26" stroke="#B8941F" strokeWidth="0.5" fill="none" opacity="0.5"
-        animate={{ rotate: 360 }} transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-        style={{ transformOrigin: "32px 32px" }}
-      />
-    </motion.svg>
+    />
   );
 }
 
@@ -69,8 +43,7 @@ export default function Navbar() {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
-    { label: "Founders", href: "/#founders" },
-    { label: "Contact", href: "/#contact" },
+    { label: "Contact", href: "/contact" },
   ];
 
   // Helper to determine active link
@@ -146,13 +119,12 @@ export default function Navbar() {
 
       {/* Action CTA Button */}
       <div className="hidden md:block">
-        <a
-          href="/#contact"
-          onClick={(e) => handleLinkClick(e, "/#contact")}
+        <Link
+          to="/contact"
           className="btn-gold !py-2.5 !px-5 text-xs tracking-wide uppercase"
         >
           Start a project
-        </a>
+        </Link>
       </div>
 
       {/* Mobile Menu Button */}
@@ -191,16 +163,13 @@ export default function Navbar() {
                 {item.label}
               </Link>
             ))}
-            <a
-              href="/#contact"
-              onClick={(e) => {
-                setIsOpen(false);
-                handleLinkClick(e, "/#contact");
-              }}
+            <Link
+              to="/contact"
+              onClick={() => setIsOpen(false)}
               className="btn-gold justify-center text-center w-full !py-3 text-xs tracking-wide uppercase mt-2"
             >
               Start a project
-            </a>
+            </Link>
           </motion.div>
         )}
       </AnimatePresence>
