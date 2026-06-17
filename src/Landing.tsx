@@ -109,7 +109,7 @@ function Hero() {
           transition={{ duration: 1, delay: 0.1 }}
           className="text-eyebrow mb-8 flex flex-col sm:flex-row items-center gap-4 justify-center"
         >
-          <BigBangMark size={48} />
+          <BigBangMark size={80} />
           <div className="flex items-center gap-3">
             <span className="w-8 h-px bg-[color:var(--gold)]" />
             Big Bang Tech Solutions — Est. Cosmos
@@ -669,7 +669,7 @@ function Footer() {
         <div className="grid md:grid-cols-12 gap-12">
           <div className="md:col-span-6">
             <div className="flex items-center gap-3">
-              <BigBangMark size={44} />
+              <BigBangMark size={64} />
               <span className="font-display font-bold text-2xl">Big Bang<span className="text-[color:var(--gold)]">.</span></span>
             </div>
             <p className="mt-8 text-[color:var(--muted-foreground)] max-w-md">

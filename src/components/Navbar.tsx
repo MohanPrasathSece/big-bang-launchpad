@@ -94,7 +94,7 @@ export default function Navbar() {
     >
       {/* Logo */}
       <Link to="/" onClick={(e) => handleLinkClick(e, "/")} className="flex items-center gap-3 group">
-        <BigBangMark size={32} />
+        <BigBangMark size={56} />
         <span className="font-display font-semibold tracking-tight text-[15px] text-white">
           Big Bang<span className="text-[color:var(--gold)] transition-transform duration-300 group-hover:scale-125 inline-block">.</span>
         </span>
