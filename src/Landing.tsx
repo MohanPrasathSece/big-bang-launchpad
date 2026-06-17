@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform, useSpring, useMotionValue } from "fram
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Navbar, { BigBangMark } from "./components/Navbar";
+import Footer from "./components/Footer";
 
 import webDevImg from "./assets/services/web-dev.png";
 import mobileDevImg from "./assets/services/mobile-dev.png";
@@ -112,30 +113,12 @@ function Hero() {
           <BigBangMark size={80} />
           <div className="flex items-center gap-3">
             <span className="w-8 h-px bg-[color:var(--gold)]" />
-            Big Bang Tech Solutions — Est. Cosmos
+            Big Bang Tech Solutions - Est. Cosmos
             <span className="w-8 h-px bg-[color:var(--gold)] hidden sm:block" />
           </div>
         </motion.div>
 
         <SplitHeadline text="Pioneering the tech cosmos." />
-
-        <motion.div
-          initial={{ scaleX: 0 }}
-          animate={{ scaleX: 1 }}
-          transition={{ duration: 1.6, delay: 1.1, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-10 h-px bg-gradient-to-r from-[color:var(--gold)] via-[color:var(--gold-champagne)] to-transparent origin-left max-w-2xl"
-        />
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 1.3 }}
-          className="mt-10 max-w-2xl text-[color:var(--muted-foreground)] text-lg leading-relaxed"
-        >
-          We are a technology consultancy that designs, builds and ships{" "}
-          <span className="text-white">AI products, custom software, cloud platforms and automation systems</span>{" "}
-          for startups and enterprises — end to end, under one roof.
-        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -145,18 +128,10 @@ function Hero() {
         >
           <a href="#services" className="btn-gold">
             See what we build
-            <span aria-hidden>→</span>
+            <span aria-hidden>â†’</span>
           </a>
           <Link to="/contact" className="btn-ghost">Start a project</Link>
         </motion.div>
-
-        {/* Floating chip cards */}
-        <div className="hidden lg:block">
-          <FloatChip text="AI · Node 0451" top="20%" left="78%" delay={1.8} />
-          <FloatChip text="Blockchain · L2" top="38%" left="70%" delay={2.4} />
-          <FloatChip text="Automation · v2.4" top="54%" left="82%" delay={2.2} />
-          <FloatChip text="Cloud · us-east-1" top="72%" left="72%" delay={2.0} />
-        </div>
       </div>
 
       <motion.div
@@ -189,10 +164,10 @@ function FloatChip({ text, top, left, delay }: { text: string; top: string; left
 /* -------------------------- What We Do (clear value prop) -------------------------- */
 function WhatWeDo() {
   const pillars = [
-    { t: "AI & Automation", d: "LLM apps, agents, and workflow automation that replace repetitive operations.", icon: "◐", link: "/services#03" },
-    { t: "Custom Software", d: "Web and mobile products engineered for scale, speed and reliability.", icon: "◇", link: "/services#01" },
-    { t: "Cloud & Data", d: "Resilient infrastructure, data pipelines and analytics on AWS, GCP and Azure.", icon: "◈", link: "/services#04" },
-    { t: "Security & DevOps", d: "Hardened systems, CI/CD, observability and continuous compliance.", icon: "◉", link: "/services#05" },
+    { t: "AI & Automation", d: "LLM apps, agents, and workflow automation that replace repetitive operations.", icon: "â-", link: "/services#03" },
+    { t: "Custom Software", d: "Web and mobile products engineered for scale, speed and reliability.", icon: "â-‡", link: "/services#01" },
+    { t: "Cloud & Data", d: "Resilient infrastructure, data pipelines and analytics on AWS, GCP and Azure.", icon: "â-ˆ", link: "/services#04" },
+    { t: "Security & DevOps", d: "Hardened systems, CI/CD, observability and continuous compliance.", icon: "â-‰", link: "/services#05" },
   ];
   return (
     <section className="px-6 md:px-12 py-32 bg-[color:var(--space-1)] section-divider">
@@ -208,7 +183,7 @@ function WhatWeDo() {
           </div>
           <div className="md:col-span-5">
             <p className="text-[color:var(--muted-foreground)] text-base leading-relaxed">
-              Big Bang Tech Solutions is a full-stack technology partner. We help companies launch new digital products, modernise legacy systems, and ship AI into production — without juggling agencies.
+              Big Bang Tech Solutions is a full-stack technology partner. We help companies launch new digital products, modernise legacy systems, and ship AI into production - without juggling agencies.
             </p>
           </div>
         </div>
@@ -237,7 +212,7 @@ function Who() {
     <section id="about" className="relative px-6 md:px-12 py-32 bg-[color:var(--space-2)]">
       <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
         <div className="md:col-span-3">
-          <div className="text-eyebrow sticky top-32">01 — Who we are</div>
+          <div className="text-eyebrow sticky top-32">01 - Who we are</div>
         </div>
         <div className="md:col-span-9">
           <Reveal>
@@ -249,7 +224,7 @@ function Who() {
           <Reveal delay={0.15}>
             <p className="mt-12 text-[color:var(--muted-foreground)] text-lg max-w-2xl leading-relaxed">
               Big Bang Tech Solutions Pvt Ltd partners with founders and enterprises to design,
-              engineer and ship products that move markets — quietly, precisely, at scale.
+              engineer and ship products that move markets - quietly, precisely, at scale.
             </p>
           </Reveal>
           <Reveal delay={0.3}>
@@ -287,7 +262,7 @@ function Story() {
   return (
     <section className="relative px-6 md:px-12 py-32 bg-[color:var(--space-ink)] noise section-divider">
       <div className="max-w-7xl mx-auto">
-        <div className="text-eyebrow mb-6">02 — The Big Bang Story</div>
+        <div className="text-eyebrow mb-6">02 - The Big Bang Story</div>
         <Reveal>
           <h2 className="text-section max-w-3xl">A universe of capability, expanding.</h2>
         </Reveal>
@@ -338,7 +313,7 @@ function Mission() {
   return (
     <section className="px-6 md:px-12 py-32 bg-[color:var(--space-2)] section-divider">
       <div className="max-w-6xl mx-auto">
-        <div className="text-eyebrow mb-10">04 — Mission</div>
+        <div className="text-eyebrow mb-10">04 - Mission</div>
         <h2 className="text-section">
           {words.map((w, i) => (
             <motion.span
@@ -373,7 +348,7 @@ function Skills() {
     <section className="px-6 md:px-12 py-32 bg-[color:var(--space-0)] section-divider">
       <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
         <div className="md:col-span-4">
-          <div className="text-eyebrow mb-6">05 — Capability</div>
+          <div className="text-eyebrow mb-6">05 - Capability</div>
           <h2 className="text-section">Crafted disciplines.</h2>
         </div>
         <div className="md:col-span-8 space-y-8 md:mt-4">
@@ -421,11 +396,11 @@ function Services() {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-end justify-between flex-wrap gap-8 mb-20">
           <div>
-            <div className="text-eyebrow mb-6">06 — Services</div>
+            <div className="text-eyebrow mb-6">06 - Services</div>
             <h2 className="text-section max-w-2xl">Nine disciplines. One studio.</h2>
           </div>
           <p className="text-[color:var(--muted-foreground)] max-w-md">
-            A vertically integrated team — strategy, design and engineering under one roof, shipping products end to end.
+            A vertically integrated team - strategy, design and engineering under one roof, shipping products end to end.
           </p>
         </div>
 
@@ -441,7 +416,7 @@ function Services() {
                   <div>
                     <div className="flex items-start justify-between">
                       <span className="font-display text-sm text-[color:var(--gold)]">{s.n}</span>
-                      <div className="w-10 h-10 rounded-full border border-[color:var(--gold)]/20 flex items-center justify-center text-[color:var(--gold)] group-hover:bg-[color:var(--gold)] group-hover:text-[color:var(--space-0)] transition-all">→</div>
+                      <div className="w-10 h-10 rounded-full border border-[color:var(--gold)]/20 flex items-center justify-center text-[color:var(--gold)] group-hover:bg-[color:var(--gold)] group-hover:text-[color:var(--space-0)] transition-all">â†’</div>
                     </div>
                     <div className="my-5 aspect-video w-full rounded-lg overflow-hidden border border-white/5 bg-[color:var(--space-ink)] relative flex items-center justify-center">
                       <img src={s.img} alt={s.t} className="object-cover w-full h-full opacity-60 group-hover:opacity-90 group-hover:scale-105 transition-all duration-700" />
@@ -475,7 +450,7 @@ function TechUniverse() {
   return (
     <section className="px-6 md:px-12 py-32 bg-[color:var(--space-3)] section-divider">
       <div className="max-w-7xl mx-auto">
-        <div className="text-eyebrow mb-6">07 — Ecosystem</div>
+        <div className="text-eyebrow mb-6">07 - Ecosystem</div>
         <Reveal>
           <h2 className="text-section max-w-3xl mb-20">An interconnected technology universe.</h2>
         </Reveal>
@@ -527,7 +502,7 @@ function Why() {
   return (
     <section className="px-6 md:px-12 py-32 bg-[color:var(--space-4)] section-divider">
       <div className="max-w-7xl mx-auto">
-        <div className="text-eyebrow mb-6">08 — Why Big Bang</div>
+        <div className="text-eyebrow mb-6">08 - Why Big Bang</div>
         <Reveal>
           <h2 className="text-section mb-20 max-w-3xl">Six reasons studios and CTOs choose us.</h2>
         </Reveal>
@@ -554,7 +529,7 @@ function Contact() {
   return (
     <section id="contact" className="px-6 md:px-12 py-32 bg-[color:var(--space-2)] section-divider">
       <div className="max-w-6xl mx-auto">
-        <div className="text-eyebrow mb-6">09 — Contact</div>
+        <div className="text-eyebrow mb-6">09 - Contact</div>
         <Reveal>
           <h2 className="text-hero">
             Let's build the <span className="gold-text italic">future</span> together.
@@ -576,7 +551,7 @@ function Contact() {
                 Reply within 24 hours.
               </p>
               <button type="button" className="btn-gold">
-                Send transmission <span aria-hidden>→</span>
+                Send transmission <span aria-hidden>â†’</span>
               </button>
             </div>
           </form>
@@ -652,7 +627,7 @@ function FinalCTA() {
         </Reveal>
         <Reveal delay={0.3}>
           <div className="mt-14 flex justify-center gap-4 flex-wrap">
-            <Link to="/contact" className="btn-gold">Start your project →</Link>
+            <Link to="/contact" className="btn-gold">Start your project â†’</Link>
             <Link to="/contact" className="btn-ghost">Schedule consultation</Link>
           </div>
         </Reveal>
@@ -661,50 +636,7 @@ function FinalCTA() {
   );
 }
 
-/* -------------------------- Footer -------------------------- */
-function Footer() {
-  return (
-    <footer className="px-6 md:px-12 pt-24 pb-10 bg-[color:var(--space-1)]">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-12 gap-12">
-          <div className="md:col-span-6">
-            <div className="flex items-center gap-3">
-              <BigBangMark size={64} />
-              <span className="font-display font-bold text-2xl">Big Bang<span className="text-[color:var(--gold)]">.</span></span>
-            </div>
-            <p className="mt-8 text-[color:var(--muted-foreground)] max-w-md">
-              Big Bang Tech Solutions Pvt Ltd — a studio engineering AI, automation and software for ambitious enterprises.
-            </p>
-          </div>
-          <div className="md:col-span-3">
-            <div className="text-eyebrow mb-6">Navigate</div>
-            <ul className="space-y-3 text-sm">
-              <li><Link to="/about" className="text-white/80 hover:text-[color:var(--gold)] transition">About</Link></li>
-              <li><Link to="/services" className="text-white/80 hover:text-[color:var(--gold)] transition">Services</Link></li>
-              <li><Link to="/contact" className="text-white/80 hover:text-[color:var(--gold)] transition">Contact</Link></li>
-            </ul>
-          </div>
-          <div className="md:col-span-3">
-            <div className="text-eyebrow mb-6">Orbit</div>
-            <ul className="space-y-3 text-sm">
-              {["LinkedIn", "X / Twitter", "GitHub", "Dribbble"].map((l) => (
-                <li key={l}>
-                  <a href="#" className="text-white/80 hover:text-[color:var(--gold)] transition">{l}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
 
-        <div className="mt-20 gold-divider" />
-        <div className="mt-8 flex flex-wrap justify-between gap-4 text-xs text-[color:var(--muted-foreground)] uppercase tracking-[0.25em]">
-          <span>© {new Date().getFullYear()} Big Bang Tech Solutions Pvt Ltd</span>
-          <span>Engineered in the cosmos</span>
-        </div>
-      </div>
-    </footer>
-  );
-}
 
 /* -------------------------- Cursor + Progress -------------------------- */
 function LuxuryCursor() {
@@ -774,3 +706,5 @@ export default function Landing() {
     </main>
   );
 }
+
+

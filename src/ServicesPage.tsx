@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform, useSpring, useMotionValue } from "fram
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Navbar, { BigBangMark } from "./components/Navbar";
+import Footer from "./components/Footer";
 
 import webDevImg from "./assets/services/web-dev.png";
 import mobileDevImg from "./assets/services/mobile-dev.png";
@@ -319,7 +320,7 @@ export default function ServicesPage() {
                 <ul className="grid sm:grid-cols-2 gap-4 text-sm text-white/90 leading-relaxed">
                   {service.features.map((feature, fIndex) => (
                     <li key={fIndex} className="flex gap-2.5 items-start">
-                      <span className="text-[color:var(--gold)] text-sm font-bold">✓</span>
+                      <span className="text-[color:var(--gold)] text-sm font-bold">âœ“</span>
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -361,33 +362,8 @@ export default function ServicesPage() {
             background: "radial-gradient(circle, rgba(212,175,55,0.12) 0%, rgba(212,175,55,0.02) 20%, transparent 60%)",
           }}
         />
-        <div className="max-w-4xl mx-auto">
-          <Reveal>
-            <h2 className="text-section mb-6">
-              Let's chart your <span className="gold-text italic">trajectory.</span>
-            </h2>
-          </Reveal>
-          <p className="mt-4 text-[color:var(--muted-foreground)] max-w-xl mx-auto text-sm md:text-base">
-            Select a custom stack, automate redundant structures, or launch a fresh digital product. We take it from diagram to deployment.
-          </p>
-          <div className="mt-10 flex justify-center gap-4 flex-wrap">
-            <Link to="/contact" className="btn-gold">Start your project →</Link>
-            <Link to="/" className="btn-ghost">Back to home</Link>
-          </div>
-        </div>
       </section>
-
-      {/* Global Footer */}
-      <footer className="max-w-7xl mx-auto px-6 md:px-12 pt-20 pb-10 border-t border-white/5 mt-20">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-[color:var(--muted-foreground)] uppercase tracking-[0.25em]">
-          <div className="flex items-center gap-3">
-            <BigBangMark size={28} />
-            <span className="font-semibold text-white/90">Big Bang.</span>
-          </div>
-          <span>© {new Date().getFullYear()} Big Bang Tech Solutions Pvt Ltd</span>
-          <span>Engineered in the cosmos</span>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

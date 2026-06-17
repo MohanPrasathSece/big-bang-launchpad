@@ -1,4 +1,4 @@
-@import "tailwindcss" source(none);
+﻿@import "tailwindcss" source(none);
 @source "../src";
 @import "tw-animate-css";
 
@@ -45,7 +45,7 @@
 }
 
 :root {
-  /* Layered dark palette — not all black */
+  /* Layered dark palette - not all black */
   --space-0: #0b0b10;       /* base near-black */
   --space-1: #14151c;       /* deep slate */
   --space-2: #1a1410;       /* warm umber (pairs w/ gold) */
@@ -242,3 +242,4 @@
   from { stroke-dashoffset: 1000; }
   to { stroke-dashoffset: 0; }
 }
+

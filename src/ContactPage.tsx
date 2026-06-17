@@ -2,6 +2,7 @@ import { motion, useScroll, useSpring, useMotionValue } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Navbar, { BigBangMark } from "./components/Navbar";
+import Footer from "./components/Footer";
 
 /* -------------------------- Cosmic visual -------------------------- */
 function CosmicSystem() {
@@ -158,7 +159,7 @@ function AccordionItem({ question, answer }: { question: string; answer: string 
           {question}
         </span>
         <span className="text-xl text-[color:var(--gold)] ml-4 font-mono select-none">
-          {isOpen ? "−" : "+"}
+          {isOpen ? "âˆ’" : "+"}
         </span>
       </button>
       <motion.div
@@ -288,7 +289,7 @@ export default function ContactPage() {
             >
               <div className="w-20 h-20 rounded-full border border-[color:var(--gold)] flex items-center justify-center mx-auto relative">
                 <div className="absolute inset-1 rounded-full border border-[color:var(--gold)]/20 animate-ping" />
-                <span className="text-[color:var(--gold)] text-3xl">✓</span>
+                <span className="text-[color:var(--gold)] text-3xl">âœ“</span>
               </div>
               <h3 className="font-display text-3xl font-bold">Transmission Received</h3>
               <p className="text-[color:var(--muted-foreground)] max-w-md mx-auto text-sm">
@@ -329,7 +330,7 @@ export default function ContactPage() {
                     </span>
                   ) : (
                     <>
-                      Send transmission <span aria-hidden>→</span>
+                      Send transmission <span aria-hidden>â†’</span>
                     </>
                   )}
                 </button>
@@ -395,17 +396,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Global Footer */}
-      <footer className="max-w-7xl mx-auto px-6 md:px-12 pt-20 pb-10 border-t border-white/5 mt-32">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-[color:var(--muted-foreground)] uppercase tracking-[0.25em]">
-          <div className="flex items-center gap-3">
-            <BigBangMark size={28} />
-            <span className="font-semibold text-white/90">Big Bang.</span>
-          </div>
-          <span>© {new Date().getFullYear()} Big Bang Tech Solutions Pvt Ltd</span>
-          <span>Engineered in the cosmos</span>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

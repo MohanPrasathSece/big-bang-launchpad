@@ -2,6 +2,7 @@ import { motion, useScroll, useTransform, useSpring, useMotionValue } from "fram
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Navbar, { BigBangMark } from "./components/Navbar";
+import Footer from "./components/Footer";
 
 /* -------------------------- Cosmic visual -------------------------- */
 function CosmicSystem() {
@@ -102,22 +103,22 @@ const VALUES = [
   {
     t: "Precision Engineering",
     d: "We reject bloated frameworks and quick shortcuts. Every line of code, database query, and CSS rule is crafted with long-term compile and scale resilience in mind.",
-    icon: "◐"
+    icon: "â-"
   },
   {
     t: "Autonomous Leverage",
     d: "We map artificial intelligence directly into background tasks. By automating repeatable workflows, we provide companies with extreme operational throughput.",
-    icon: "◇"
+    icon: "â-‡"
   },
   {
     t: "Hardened security",
     d: "Data boundaries are sacred. We build secure encryption structures, enforce vault protocols, and prepare your tech stack for SoC2 or HIPAA compliance out of the box.",
-    icon: "◉"
+    icon: "â-‰"
   },
   {
     t: "Radical Transparency",
     d: "No intermediate project managers, sales fluff, or consulting jargon. You speak directly with engineers who write your software, with live pipeline updates daily.",
-    icon: "◈"
+    icon: "â-ˆ"
   }
 ];
 
@@ -230,41 +231,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Footer CTA */}
-      <section className="relative mt-24 px-6 md:px-12 text-center py-20 overflow-hidden">
-        {/* radial light */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] h-[90vw] rounded-full -z-10 pointer-events-none"
-          style={{
-            background: "radial-gradient(circle, rgba(212,175,55,0.12) 0%, rgba(212,175,55,0.02) 20%, transparent 60%)",
-          }}
-        />
-        <div className="max-w-4xl mx-auto">
-          <Reveal>
-            <h2 className="text-section mb-6">
-              Let's chart your <span className="gold-text italic">trajectory.</span>
-            </h2>
-          </Reveal>
-          <p className="mt-4 text-[color:var(--muted-foreground)] max-w-xl mx-auto text-sm md:text-base">
-            Partner with us to architect your custom cloud infrastructure, fine-tune models, or launch software designed to last.
-          </p>
-          <div className="mt-10 flex justify-center gap-4 flex-wrap">
-            <a href="/#contact" className="btn-gold">Start your project →</a>
-            <Link to="/" className="btn-ghost">Back to home</Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Global Footer */}
-      <footer className="max-w-7xl mx-auto px-6 md:px-12 pt-20 pb-10 border-t border-white/5 mt-20">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-[color:var(--muted-foreground)] uppercase tracking-[0.25em]">
-          <div className="flex items-center gap-3">
-            <BigBangMark size={28} />
-            <span className="font-semibold text-white/90">Big Bang.</span>
-          </div>
-          <span>© {new Date().getFullYear()} Big Bang Tech Solutions Pvt Ltd</span>
-          <span>Engineered in the cosmos</span>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }
