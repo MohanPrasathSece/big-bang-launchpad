@@ -86,15 +86,15 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 max-w-5xl w-[calc(100%-2rem)] rounded-full border transition-all duration-300 flex items-center justify-between shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8),0_0_50px_rgba(212,175,55,0.03)]
+      className={`fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-50 max-w-5xl w-[calc(100%-1.5rem)] md:w-[calc(100%-2rem)] rounded-full border transition-all duration-300 flex items-center justify-between shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8),0_0_50px_rgba(212,175,55,0.03)]
         ${isScrolled 
-          ? "py-2.5 px-5 bg-black/80 border-gold/30 backdrop-blur-xl" 
-          : "py-3.5 px-6 bg-black/50 border-white/10 backdrop-blur-lg"
+          ? "py-2 px-4 md:py-2.5 md:px-5 bg-black/80 border-gold/30 backdrop-blur-xl" 
+          : "py-3 px-4 md:py-3.5 md:px-6 bg-black/50 border-white/10 backdrop-blur-lg"
         }`}
     >
       {/* Logo */}
-      <Link to="/" onClick={(e) => handleLinkClick(e, "/")} className="flex items-center gap-3 group">
-        <BigBangMark size={56} />
+      <Link to="/" onClick={(e) => handleLinkClick(e, "/")} className="flex items-center gap-2 md:gap-3 group">
+        <BigBangMark size={44} />
         <span className="font-display font-semibold tracking-tight text-[15px] text-white">
           Big Bang<span className="text-[color:var(--gold)] transition-transform duration-300 group-hover:scale-125 inline-block">.</span>
         </span>

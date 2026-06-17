@@ -101,11 +101,11 @@ function SplitHeadline({ text }: { text: string }) {
 /* -------------------------- Hero -------------------------- */
 function Hero() {
   return (
-    <section id="top" className="relative min-h-screen pt-32 px-6 md:px-12 flex flex-col justify-center noise overflow-hidden">
+    <section id="top" className="relative min-h-screen pt-24 md:pt-32 px-6 md:px-12 flex flex-col justify-center noise overflow-hidden">
       <CosmicSystem />
-      <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* Left Side Content */}
-        <div className="relative z-10">
+        <div className="relative z-10 order-2 lg:order-1">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -142,14 +142,14 @@ function Hero() {
           >
             <a href="#services" className="btn-gold">
               See what we build
-              <span aria-hidden>â†’</span>
+              <span aria-hidden>→</span>
             </a>
             <Link to="/contact" className="btn-ghost">Start a project</Link>
           </motion.div>
         </div>
 
         {/* Right Side Logo */}
-        <div className="relative h-full min-h-[300px] lg:min-h-[500px] flex items-center justify-center pointer-events-none mt-12 lg:mt-0">
+        <div className="relative h-full min-h-[200px] md:min-h-[300px] lg:min-h-[500px] flex items-center justify-center pointer-events-none mb-12 lg:mb-0 lg:mt-0 order-1 lg:order-2">
           <motion.div
             initial={{ opacity: 0, scale: 0.5, rotate: -20 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
@@ -183,14 +183,6 @@ function Hero() {
         </div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 2.6, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 text-[15px] tracking-[0.3em] text-[color:var(--muted-foreground)] uppercase z-10"
-      >
-        Scroll Â· the universe expands
-      </motion.div>
     </section>
   );
 }
@@ -219,9 +211,9 @@ function WhatWeDo() {
     { t: "Security & DevOps", d: "Hardened systems, CI/CD, observability and continuous compliance.", icon: "⌖", link: "/services#05" },
   ];
   return (
-    <section className="px-6 md:px-12 py-32 bg-[color:var(--space-1)] section-divider">
+    <section className="px-6 md:px-12 py-20 md:py-32 bg-[color:var(--space-1)] section-divider">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-12 gap-10 items-end mb-16">
+        <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-end mb-10 md:mb-16">
           <div className="md:col-span-7">
             <div className="text-eyebrow mb-6">What we do</div>
             <Reveal>
@@ -237,7 +229,7 @@ function WhatWeDo() {
           </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {pillars.map((p, i) => (
             <Reveal key={p.t} delay={i * 0.06}>
               <Link to={p.link} className="block h-full group">
@@ -258,7 +250,7 @@ function WhatWeDo() {
 /* -------------------------- Section 2: Who -------------------------- */
 function Who() {
   return (
-    <section id="about" className="relative px-6 md:px-12 py-32 bg-[color:var(--space-2)]">
+    <section id="about" className="relative px-6 md:px-12 py-20 md:py-32 bg-[color:var(--space-2)]">
       <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
         <div className="md:col-span-3">
           <div className="text-eyebrow sticky top-32">01 - Who we are</div>
@@ -275,22 +267,6 @@ function Who() {
               Big Bang Tech Solutions Pvt Ltd partners with founders and enterprises to design,
               engineer and ship products that move markets - quietly, precisely, at scale.
             </p>
-          </Reveal>
-          <Reveal delay={0.3}>
-            <div className="mt-16 gold-divider" />
-            <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-8">
-              {[
-                { k: "120+", v: "Products shipped" },
-                { k: "14", v: "Industries served" },
-                { k: "99.99%", v: "Avg. uptime" },
-                { k: "2019", v: "Cosmos started" },
-              ].map((s) => (
-                <div key={s.v}>
-                  <div className="font-display text-4xl md:text-5xl gold-text font-bold">{s.k}</div>
-                  <div className="mt-2 text-[15px] uppercase tracking-[0.2em] text-[color:var(--muted-foreground)]">{s.v}</div>
-                </div>
-              ))}
-            </div>
           </Reveal>
         </div>
       </div>
@@ -309,14 +285,14 @@ const STORY = [
 
 function Story() {
   return (
-    <section className="relative px-6 md:px-12 py-32 bg-[color:var(--space-ink)] noise section-divider">
+    <section className="relative px-6 md:px-12 py-20 md:py-32 bg-[color:var(--space-ink)] noise section-divider">
       <div className="max-w-7xl mx-auto">
         <div className="text-eyebrow mb-6">02 - The Big Bang Story</div>
         <Reveal>
           <h2 className="text-section max-w-3xl">A universe of capability, expanding.</h2>
         </Reveal>
 
-        <div className="mt-24 relative">
+        <div className="mt-16 md:mt-24 relative">
           {STORY.map((s, i) => (
             <div
               key={s.n}
@@ -328,7 +304,7 @@ function Story() {
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-                className="surface-card p-10 md:p-16 mb-8 grid md:grid-cols-12 gap-8"
+                className="surface-card p-6 md:p-16 mb-8 grid md:grid-cols-12 gap-6 md:gap-8"
                 style={{
                   background: `linear-gradient(180deg, #0c0c0c 0%, #050505 100%)`,
                 }}
@@ -360,9 +336,9 @@ function Mission() {
   const text = "Our mission is to drive innovation and create cutting-edge solutions that empower businesses to achieve their full potential.";
   const words = text.split(" ");
   return (
-    <section className="px-6 md:px-12 py-32 bg-[color:var(--space-2)] section-divider">
+    <section className="px-6 md:px-12 py-20 md:py-32 bg-[color:var(--space-2)] section-divider">
       <div className="max-w-6xl mx-auto">
-        <div className="text-eyebrow mb-10">04 - Mission</div>
+        <div className="text-eyebrow mb-10">03 - Mission</div>
         <h2 className="text-section">
           {words.map((w, i) => (
             <motion.span
@@ -394,10 +370,10 @@ function Skills() {
     { name: "Mobile App Development", v: 93 },
   ];
   return (
-    <section className="px-6 md:px-12 py-32 bg-[color:var(--space-0)] section-divider">
+    <section className="px-6 md:px-12 py-20 md:py-32 bg-[color:var(--space-0)] section-divider">
       <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
         <div className="md:col-span-4">
-          <div className="text-eyebrow mb-6">05 - Capability</div>
+          <div className="text-eyebrow mb-6">04 - Capability</div>
           <h2 className="text-section">Crafted disciplines.</h2>
         </div>
         <div className="md:col-span-8 space-y-8 md:mt-4">
@@ -436,16 +412,16 @@ const SERVICES = [
   { n: "06", t: "Big Data", d: "Pipelines, lakehouses and analytics that turn signal into decisions.", img: bigDataImg },
   { n: "07", t: "Revenue Cycle Management", d: "Domain software for healthcare operations and reimbursement workflows.", img: rcmBillingImg },
   { n: "08", t: "Design & Digital Marketing", d: "Brand systems, motion identity and growth engineering, in one place.", img: designMarketingImg },
-  { n: "09", t: "Crypto Â· Blockchain Â· Web3", d: "Smart contracts, L2 infrastructure and tokenised product surfaces.", img: blockchainImg },
+  { n: "09", t: "Crypto · Blockchain · Web3", d: "Smart contracts, L2 infrastructure and tokenised product surfaces.", img: blockchainImg },
 ];
 
 function Services() {
   return (
-    <section id="services" className="relative px-6 md:px-12 py-32 bg-[color:var(--space-1)] noise section-divider">
+    <section id="services" className="relative px-6 md:px-12 py-20 md:py-32 bg-[color:var(--space-1)] noise section-divider">
       <div className="max-w-7xl mx-auto">
-        <div className="flex items-end justify-between flex-wrap gap-8 mb-20">
+        <div className="flex items-end justify-between flex-wrap gap-8 mb-12 md:mb-20">
           <div>
-            <div className="text-eyebrow mb-6">06 - Services</div>
+            <div className="text-eyebrow mb-6">05 - Services</div>
             <h2 className="text-section max-w-2xl">Nine disciplines. One studio.</h2>
           </div>
           <p className="text-[color:var(--muted-foreground)] max-w-md">
@@ -453,14 +429,14 @@ function Services() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {SERVICES.map((s, i) => (
             <Reveal key={s.n} delay={(i % 3) * 0.05}>
               <Link to={`/services#${s.n}`}>
                 <motion.div
                   whileHover={{ y: -8, rotate: -0.4 }}
                   transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-                  className="surface-card p-8 h-full flex flex-col justify-between min-h-[380px] group cursor-pointer"
+                  className="surface-card p-6 md:p-8 h-full flex flex-col justify-between min-h-[380px] group cursor-pointer"
                 >
                   <div>
                     <div className="flex items-start justify-between">
@@ -497,9 +473,9 @@ function TechUniverse() {
     { l: "Data", x: 22, y: 32, r: 168 },
   ];
   return (
-    <section className="px-6 md:px-12 py-32 bg-[color:var(--space-3)] section-divider">
+    <section className="px-6 md:px-12 py-20 md:py-32 bg-[color:var(--space-3)] section-divider">
       <div className="max-w-7xl mx-auto">
-        <div className="text-eyebrow mb-6">07 - Ecosystem</div>
+        <div className="text-eyebrow mb-6">06 - Ecosystem</div>
         <Reveal>
           <h2 className="text-section max-w-3xl mb-20">An interconnected technology universe.</h2>
         </Reveal>
@@ -549,11 +525,11 @@ function Why() {
     "Automation", "Expert Team", "Future-Ready Solutions",
   ];
   return (
-    <section className="px-6 md:px-12 py-32 bg-[color:var(--space-4)] section-divider">
+    <section className="px-6 md:px-12 py-20 md:py-32 bg-[color:var(--space-4)] section-divider">
       <div className="max-w-7xl mx-auto">
-        <div className="text-eyebrow mb-6">08 - Why Big Bang</div>
+        <div className="text-eyebrow mb-6">07 - Why Big Bang</div>
         <Reveal>
-          <h2 className="text-section mb-20 max-w-3xl">Six reasons studios and CTOs choose us.</h2>
+          <h2 className="text-section mb-12 md:mb-20 max-w-3xl">Six reasons studios and CTOs choose us.</h2>
         </Reveal>
         <div className="divide-y divide-white/5 border-y border-white/5">
           {items.map((t, i) => (
@@ -576,9 +552,9 @@ function Why() {
 /* -------------------------- Contact -------------------------- */
 function Contact() {
   return (
-    <section id="contact" className="px-6 md:px-12 py-32 bg-[color:var(--space-2)] section-divider">
+    <section id="contact" className="px-6 md:px-12 py-20 md:py-32 bg-[color:var(--space-2)] section-divider">
       <div className="max-w-6xl mx-auto">
-        <div className="text-eyebrow mb-6">09 - Contact</div>
+        <div className="text-eyebrow mb-6">08 - Contact</div>
         <Reveal>
           <h2 className="text-hero">
             Let's build the <span className="gold-text italic">future</span> together.
@@ -586,7 +562,7 @@ function Contact() {
         </Reveal>
 
         <Reveal delay={0.15}>
-          <form className="mt-20 grid md:grid-cols-2 gap-10 max-w-4xl">
+          <form className="mt-12 md:mt-20 grid md:grid-cols-2 gap-8 md:gap-10 max-w-4xl">
             <Field label="Your name" type="text" />
             <Field label="Email" type="email" />
             <div className="md:col-span-2">
@@ -645,7 +621,7 @@ function Field({ label, type }: { label: string; type: string }) {
 /* -------------------------- Final CTA -------------------------- */
 function FinalCTA() {
   return (
-    <section className="relative px-6 md:px-12 py-48 overflow-hidden noise">
+    <section className="relative px-6 md:px-12 py-24 md:py-48 overflow-hidden noise">
       {/* radial explosion */}
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-[120vw] rounded-full"
         style={{

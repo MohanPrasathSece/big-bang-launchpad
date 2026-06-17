@@ -140,7 +140,7 @@ export default function AboutPage() {
       <CosmicSystem />
 
       {/* Hero Section */}
-      <section className="relative pt-44 px-6 md:px-12 flex flex-col justify-center items-center text-center">
+      <section className="relative pt-32 md:pt-44 px-6 md:px-12 flex flex-col justify-center items-center text-center">
         <div className="max-w-4xl mx-auto w-full">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -176,8 +176,8 @@ export default function AboutPage() {
 
 
       {/* Core Values Section */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 mt-32 section-divider pt-32">
-        <div className="grid md:grid-cols-12 gap-10 items-end mb-16">
+      <section className="max-w-7xl mx-auto px-6 md:px-12 mt-20 md:mt-32 section-divider pt-20 md:pt-32">
+        <div className="grid md:grid-cols-12 gap-8 md:gap-10 items-end mb-10 md:mb-16">
           <div className="md:col-span-7">
             <div className="text-eyebrow mb-6">Core Values</div>
             <Reveal>
@@ -193,10 +193,10 @@ export default function AboutPage() {
           </div>
         </div>
 
-        <div className="grid sm:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
           {VALUES.map((val, i) => (
             <Reveal key={val.t} delay={i * 0.08}>
-              <div className="surface-card p-8 h-full flex flex-col justify-between">
+              <div className="surface-card p-6 md:p-8 h-full flex flex-col justify-between">
                 <div>
                   <div className="text-3xl text-[color:var(--gold)] mb-6 font-display">{val.icon}</div>
                   <h3 className="font-display text-2xl font-semibold text-white">{val.t}</h3>
@@ -209,11 +209,11 @@ export default function AboutPage() {
       </section>
 
       {/* Methodology / Workflow Section */}
-      <section className="max-w-6xl mx-auto px-6 md:px-12 mt-32 section-divider pt-32">
+      <section className="max-w-6xl mx-auto px-6 md:px-12 mt-20 md:mt-32 section-divider pt-20 md:pt-32">
         <div className="text-eyebrow mb-6 text-center">Operational Loop</div>
-        <h2 className="text-section text-center mb-16">How we ship.</h2>
+        <h2 className="text-section text-center mb-10 md:mb-16">How we ship.</h2>
 
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-4 gap-6 md:gap-8">
           {[
             { n: "01", t: "Blueprint", d: "Deep architecture mapping, API signatures, cloud diagrams, and tech selection." },
             { n: "02", t: "Cinematic design", d: "High-fidelity user interface prototyping, design tokens, and interactions." },
@@ -221,7 +221,7 @@ export default function AboutPage() {
             { n: "04", t: "Quiet scale", d: "Observed launches with strict telemetry and absolute runtime uptime." }
           ].map((step, i) => (
             <Reveal key={step.n} delay={i * 0.05}>
-              <div className="bg-white/[0.01] border border-white/5 p-8 rounded-xl relative group hover:border-[color:var(--gold)]/20 transition-colors h-full">
+              <div className="bg-white/[0.01] border border-white/5 p-6 md:p-8 rounded-xl relative group hover:border-[color:var(--gold)]/20 transition-colors h-full">
                 <div className="font-display text-[15px] text-[color:var(--gold)] font-bold mb-4 tracking-wider">{step.n}</div>
                 <h4 className="font-display text-xl font-bold text-white mb-3">{step.t}</h4>
                 <p className="text-[15px] md:text-base text-[color:var(--muted-foreground)] leading-relaxed">{step.d}</p>

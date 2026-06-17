@@ -211,7 +211,7 @@ const SERVICES_DETAILS = [
   },
   {
     id: "09",
-    title: "Crypto Â· Blockchain Â· Web3",
+    title: "Crypto · Blockchain · Web3",
     tagline: "Audited smart contracts and decentralised networks.",
     desc: "We construct secure smart contracts, custom Layer 2 integrations, and decentralized financial products. We engineer token economies with rigorous auditing and security controls built into the dev loop.",
     stack: ["Solidity", "Rust", "Hardhat", "Ethers.js", "Polygon", "Arbitrum"],
@@ -251,7 +251,7 @@ export default function ServicesPage() {
       <CosmicSystem />
 
       {/* Services Hero */}
-      <section className="relative pt-44 px-6 md:px-12 flex flex-col justify-center items-center text-center">
+      <section className="relative pt-32 md:pt-44 px-6 md:px-12 flex flex-col justify-center items-center text-center">
         <div className="max-w-4xl mx-auto w-full">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -289,14 +289,14 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid & Details */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 mt-28 space-y-24">
+      <section className="max-w-7xl mx-auto px-6 md:px-12 mt-20 md:mt-28 space-y-16 md:space-y-24">
         {SERVICES_DETAILS.map((service, index) => (
           <div
             key={service.id}
             id={service.id}
-            className="scroll-mt-32 border-b border-white/5 pb-20"
+            className="scroll-mt-32 border-b border-white/5 pb-16 md:pb-20"
           >
-            <div className="grid lg:grid-cols-12 gap-12 items-center">
+            <div className="grid lg:grid-cols-12 gap-10 md:gap-12 items-center">
               {/* Text Area */}
               <div className={`lg:col-span-7 space-y-6 ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                 <div className="flex items-center gap-4">
@@ -355,7 +355,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Footer CTA */}
-      <section className="relative mt-24 px-6 md:px-12 text-center py-20 overflow-hidden">
+      <section className="relative mt-16 md:mt-24 px-6 md:px-12 text-center py-16 md:py-20 overflow-hidden">
         {/* radial light */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] h-[90vw] rounded-full -z-10 pointer-events-none"
           style={{

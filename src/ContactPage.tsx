@@ -244,7 +244,7 @@ export default function ContactPage() {
       <CosmicSystem />
 
       {/* Hero Section */}
-      <section className="relative pt-44 px-6 md:px-12 flex flex-col justify-center items-center text-center">
+      <section className="relative pt-32 md:pt-44 px-6 md:px-12 flex flex-col justify-center items-center text-center">
         <div className="max-w-4xl mx-auto w-full">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -278,9 +278,9 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Content Grid */}
-      <section className="max-w-7xl mx-auto px-6 md:px-12 mt-24 grid lg:grid-cols-12 gap-16 items-start">
+      <section className="max-w-7xl mx-auto px-6 md:px-12 mt-16 md:mt-24 grid lg:grid-cols-12 gap-10 md:gap-16 items-start">
         {/* Form Column */}
-        <div className="lg:col-span-7 surface-card p-8 md:p-12 relative overflow-hidden">
+        <div className="lg:col-span-7 surface-card p-6 md:p-12 relative overflow-hidden">
           {submitted ? (
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -385,9 +385,9 @@ export default function ContactPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="max-w-4xl mx-auto px-6 md:px-12 mt-32 section-divider pt-32">
+      <section className="max-w-4xl mx-auto px-6 md:px-12 mt-20 md:mt-32 section-divider pt-20 md:pt-32">
         <div className="text-eyebrow text-center mb-6">FAQ</div>
-        <h2 className="text-section text-center mb-16">Clear parameters.</h2>
+        <h2 className="text-section text-center mb-10 md:mb-16">Clear parameters.</h2>
         
         <div className="space-y-2">
           {FAQS.map((faq, index) => (
