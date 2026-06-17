@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import bbtLogo from "../assets/bbt-logo.png";
+import bbtLogo from "../assets/logo new.png";
 
 /* -------------------------- Logo -------------------------- */
 export function BigBangMark({ size = 36 }: { size?: number }) {
