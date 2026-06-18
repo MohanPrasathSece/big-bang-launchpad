@@ -149,7 +149,7 @@ function Hero() {
         </div>
 
         {/* Right Side Logo */}
-        <div className="relative h-full min-h-[200px] md:min-h-[300px] lg:min-h-[500px] flex items-center justify-center pointer-events-none mb-12 lg:mb-0 lg:mt-0 order-1 lg:order-2">
+        <div className="relative h-full min-h-[200px] md:min-h-[300px] lg:min-h-[500px] flex items-center justify-center pointer-events-none mb-12 lg:mb-0 lg:mt-0 order-1 lg:order-2 -translate-y-8 lg:-translate-y-16">
           <motion.div
             initial={{ opacity: 0, scale: 0.5, rotate: -20 }}
             animate={{ opacity: 1, scale: 1, rotate: 0 }}
