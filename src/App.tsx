@@ -4,6 +4,7 @@ import Landing from "./Landing";
 import ServicesPage from "./ServicesPage";
 import AboutPage from "./AboutPage";
 import ContactPage from "./ContactPage";
+import WhatsAppButton from "./components/WhatsAppButton";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
+        <WhatsAppButton />
       </BrowserRouter>
     </QueryClientProvider>
   );
