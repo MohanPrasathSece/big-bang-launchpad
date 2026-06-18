@@ -253,7 +253,7 @@ function Who() {
     <section id="about" className="relative px-6 md:px-12 py-20 md:py-32 bg-[color:var(--space-2)]">
       <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
         <div className="md:col-span-3">
-          <div className="text-eyebrow sticky top-32">01 - Who we are</div>
+          <div className="text-eyebrow sticky top-32">Who we are</div>
         </div>
         <div className="md:col-span-9">
           <Reveal>
@@ -287,7 +287,7 @@ function Story() {
   return (
     <section className="relative px-6 md:px-12 py-20 md:py-32 bg-[color:var(--space-ink)] noise section-divider">
       <div className="max-w-7xl mx-auto">
-        <div className="text-eyebrow mb-6">02 - The Big Bang Story</div>
+        <div className="text-eyebrow mb-6">The Big Bang Story</div>
         <Reveal>
           <h2 className="text-section max-w-3xl">A universe of capability, expanding.</h2>
         </Reveal>
@@ -338,7 +338,7 @@ function Mission() {
   return (
     <section className="px-6 md:px-12 py-20 md:py-32 bg-[color:var(--space-2)] section-divider">
       <div className="max-w-6xl mx-auto">
-        <div className="text-eyebrow mb-10">03 - Mission</div>
+        <div className="text-eyebrow mb-10">Mission</div>
         <h2 className="text-section">
           {words.map((w, i) => (
             <motion.span
@@ -373,7 +373,7 @@ function Skills() {
     <section className="px-6 md:px-12 py-20 md:py-32 bg-[color:var(--space-0)] section-divider">
       <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
         <div className="md:col-span-4">
-          <div className="text-eyebrow mb-6">04 - Capability</div>
+          <div className="text-eyebrow mb-6">Capability</div>
           <h2 className="text-section">Crafted disciplines.</h2>
         </div>
         <div className="md:col-span-8 space-y-8 md:mt-4">
@@ -421,7 +421,7 @@ function Services() {
       <div className="max-w-7xl mx-auto">
         <div className="flex items-end justify-between flex-wrap gap-8 mb-12 md:mb-20">
           <div>
-            <div className="text-eyebrow mb-6">05 - Services</div>
+            <div className="text-eyebrow mb-6">Services</div>
             <h2 className="text-section max-w-2xl">Nine disciplines. One studio.</h2>
           </div>
           <p className="text-[color:var(--muted-foreground)] max-w-md">
@@ -475,7 +475,7 @@ function TechUniverse() {
   return (
     <section className="px-6 md:px-12 py-20 md:py-32 bg-[color:var(--space-3)] section-divider">
       <div className="max-w-7xl mx-auto">
-        <div className="text-eyebrow mb-6">06 - Ecosystem</div>
+        <div className="text-eyebrow mb-6">Ecosystem</div>
         <Reveal>
           <h2 className="text-section max-w-3xl mb-20">An interconnected technology universe.</h2>
         </Reveal>
@@ -527,7 +527,7 @@ function Why() {
   return (
     <section className="px-6 md:px-12 py-20 md:py-32 bg-[color:var(--space-4)] section-divider">
       <div className="max-w-7xl mx-auto">
-        <div className="text-eyebrow mb-6">07 - Why Big Bang</div>
+        <div className="text-eyebrow mb-6">Why Big Bang</div>
         <Reveal>
           <h2 className="text-section mb-12 md:mb-20 max-w-3xl">Six reasons studios and CTOs choose us.</h2>
         </Reveal>
@@ -554,7 +554,7 @@ function Contact() {
   return (
     <section id="contact" className="px-6 md:px-12 py-20 md:py-32 bg-[color:var(--space-2)] section-divider">
       <div className="max-w-6xl mx-auto">
-        <div className="text-eyebrow mb-6">08 - Contact</div>
+        <div className="text-eyebrow mb-6">Contact</div>
         <Reveal>
           <h2 className="text-hero">
             Let's build the <span className="gold-text italic">future</span> together.
