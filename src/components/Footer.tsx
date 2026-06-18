@@ -40,7 +40,8 @@ export default function Footer() {
             <div>
               <div className="text-[15px] uppercase tracking-[0.3em] text-[color:var(--gold)] mb-6 font-bold">Orbit</div>
               <ul className="space-y-4 text-[15px] text-white/70">
-                <li><a href="#" className="hover:text-[color:var(--gold)] transition-colors">LinkedIn</a></li>
+                <li><a href="https://www.linkedin.com/company/the-big-bang-tech/" target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--gold)] transition-colors">LinkedIn</a></li>
+                <li><a href="https://www.instagram.com/bigbangtechsolutions" target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--gold)] transition-colors">Instagram</a></li>
                 <li><a href="#" className="hover:text-[color:var(--gold)] transition-colors">X / Twitter</a></li>
                 <li><a href="#" className="hover:text-[color:var(--gold)] transition-colors">GitHub</a></li>
               </ul>
@@ -59,7 +60,7 @@ export default function Footer() {
 
         <div className="pt-6 md:pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] md:text-[12px] text-[color:var(--muted-foreground)] uppercase tracking-[0.15em] text-center md:text-left">
           <div className="flex flex-col gap-1.5 md:gap-1">
-            <span>© {new Date().getFullYear()} Big Bang Tech Solutions Pvt Ltd. All rights reserved.</span>
+            <span>© {new Date().getFullYear()} The Big Bang Tech Solutions Pvt Ltd. All rights reserved.</span>
             <span className="text-[9px] md:text-[10px] text-white/40">
               Developed by <a href="https://www.amzcoz.com" target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--gold)] transition-colors text-white/60">amzcoz</a>
             </span>
