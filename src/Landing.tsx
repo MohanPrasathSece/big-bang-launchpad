@@ -218,7 +218,7 @@ function WhatWeDo() {
             <div className="text-eyebrow mb-6">What we do</div>
             <Reveal>
               <h2 className="text-section">
-                Four practices. <span className="gold-text italic">One delivery team.</span>
+                Four practices. <span className="gold-text italic">one delivery team.</span>
               </h2>
             </Reveal>
           </div>
