@@ -375,8 +375,8 @@ export default function ContactPage() {
               </div>
               <div className="flex justify-between py-2 border-b border-white/5">
                 <span className="text-[color:var(--muted-foreground)]">Founder Desk</span>
-                <a href="mailto:info@thebigbangtech.com" className="text-white hover:text-[color:var(--gold)] transition">
-                  info@thebigbangtech.com
+                <a href="mailto:aveys@thebigbangtech.com" className="text-white hover:text-[color:var(--gold)] transition">
+                  aveys@thebigbangtech.com
                 </a>
               </div>
             </div>
