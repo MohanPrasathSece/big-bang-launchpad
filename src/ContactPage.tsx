@@ -351,8 +351,8 @@ export default function ContactPage() {
             
             <div className="space-y-6 pt-4">
               {[
-                { city: "Dubai" },
-                { city: "India" }
+                { city: "India" },
+                { city: "Dubai" }
               ].map((loc) => (
                 <div key={loc.city} className="flex gap-4 items-start border-l border-[color:var(--gold)]/30 pl-4 py-1">
                   <div>
@@ -368,15 +368,15 @@ export default function ContactPage() {
             <div className="text-[15px] uppercase tracking-widest text-white/40">Direct Signals</div>
             <div className="space-y-2 text-[15px]">
               <div className="flex justify-between py-2 border-b border-white/5">
-                <span className="text-[color:var(--muted-foreground)]">General Inquiries</span>
-                <a href="mailto:hello@bigbangtech.solutions" className="text-white hover:text-[color:var(--gold)] transition">
-                  hello@bigbangtech.solutions
+                <span className="text-[color:var(--muted-foreground)]">General inquiries</span>
+                <a href="mailto:info@thebigbangtech.com" className="text-white hover:text-[color:var(--gold)] transition">
+                  info@thebigbangtech.com
                 </a>
               </div>
               <div className="flex justify-between py-2 border-b border-white/5">
                 <span className="text-[color:var(--muted-foreground)]">Founder Desk</span>
-                <a href="mailto:directors@bigbangtech.solutions" className="text-white hover:text-[color:var(--gold)] transition">
-                  directors@bigbangtech.solutions
+                <a href="mailto:info@thebigbangtech.com" className="text-white hover:text-[color:var(--gold)] transition">
+                  info@thebigbangtech.com
                 </a>
               </div>
             </div>
