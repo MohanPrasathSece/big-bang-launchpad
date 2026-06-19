@@ -50,9 +50,9 @@ export default function Footer() {
             <div>
               <div className="text-[15px] uppercase tracking-[0.3em] text-[color:var(--gold)] mb-6 font-bold">Contact</div>
               <ul className="space-y-4 text-[15px] text-white/70">
-                <li><a href="mailto:hello@bigbangtech.solutions" className="hover:text-[color:var(--gold)] transition-colors break-words">hello@bigbangtech.solutions</a></li>
+                <li><a href="mailto:info@thebigbangtech.com" className="hover:text-[color:var(--gold)] transition-colors break-words">info@thebigbangtech.com</a></li>
                 <li><a href="tel:+918668274952" className="hover:text-[color:var(--gold)] transition-colors">+91 86682 74952</a></li>
-                <li><span className="text-[color:var(--muted-foreground)]">Dubai · India</span></li>
+                <li><span className="text-[color:var(--muted-foreground)]">India · Dubai</span></li>
               </ul>
             </div>
           </div>
@@ -61,9 +61,6 @@ export default function Footer() {
         <div className="pt-6 md:pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] md:text-[12px] text-[color:var(--muted-foreground)] uppercase tracking-[0.15em] text-center md:text-left">
           <div className="flex flex-col gap-1.5 md:gap-1">
             <span>© {new Date().getFullYear()} The Big Bang Tech Solutions Pvt Ltd. All rights reserved.</span>
-            <span className="text-[9px] md:text-[10px] text-white/40">
-              Developed by <a href="https://www.amzcoz.com" target="_blank" rel="noopener noreferrer" className="hover:text-[color:var(--gold)] transition-colors text-white/60">amzcoz</a>
-            </span>
           </div>
           <div className="flex gap-4 md:gap-6 flex-wrap justify-center">
             <a href="#" className="hover:text-[color:var(--gold)] transition-colors">Privacy Policy</a>

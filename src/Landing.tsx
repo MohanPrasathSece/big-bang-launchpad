@@ -113,10 +113,10 @@ function Hero() {
             className="text-eyebrow mb-8 flex items-center gap-3"
           >
             <span className="w-8 h-px bg-[color:var(--gold)]" />
-            Big Bang Tech Solutions - Est. Cosmos
+            Big Bang Tech Solutions - The established universe
           </motion.div>
 
-          <SplitHeadline text="Pioneering the tech cosmos." />
+          <SplitHeadline text="Pioneering the technological cosmos." />
 
           <motion.div
             initial={{ scaleX: 0 }}
@@ -131,7 +131,7 @@ function Hero() {
             transition={{ duration: 1, delay: 1.3 }}
             className="mt-8 text-[color:var(--muted-foreground)] text-lg leading-relaxed max-w-lg"
           >
-            We are a technology consultancy that designs, builds and ships AI products, custom software, cloud platforms and automation systems for startups and enterprises - end to end, under one roof.
+            We are a technology consulting firm that designs, builds, and deploys AI products, custom software, cloud platforms, and automation systems for startups and enterprises - end-to-end, under one roof.
           </motion.p>
 
           <motion.div
@@ -205,10 +205,10 @@ function FloatChip({ text, top, left, delay }: { text: string; top: string; left
 /* -------------------------- What We Do (clear value prop) -------------------------- */
 function WhatWeDo() {
   const pillars = [
-    { t: "AI & Automation", d: "LLM apps, agents, and workflow automation that replace repetitive operations.", icon: "✦", link: "/services#03" },
-    { t: "Custom Software", d: "Web and mobile products engineered for scale, speed and reliability.", icon: "⌘", link: "/services#01" },
-    { t: "Cloud & Data", d: "Resilient infrastructure, data pipelines and analytics on AWS, GCP and Azure.", icon: "⎈", link: "/services#04" },
-    { t: "Security & DevOps", d: "Hardened systems, CI/CD, observability and continuous compliance.", icon: "⌖", link: "/services#05" },
+    { t: "AI & Automation", d: "LLM applications, agents, and workflow automation that replace repetitive operations.", icon: "✦", link: "/services#03" },
+    { t: "Custom Software", d: "Web and mobile products engineered for scale, speed, and reliability.", icon: "⌘", link: "/services#01" },
+    { t: "Cloud & Data", d: "Resilient infrastructure, data pipelines, and analytics on AWS, GCP, and Azure.", icon: "⎈", link: "/services#04" },
+    { t: "Security & DevOps", d: "Hardened systems, CI/CD, observability, and continuous compliance.", icon: "⌖", link: "/services#05" },
   ];
   return (
     <section className="px-6 md:px-12 py-20 md:py-32 bg-[color:var(--space-1)] section-divider">
@@ -218,13 +218,13 @@ function WhatWeDo() {
             <div className="text-eyebrow mb-6">What we do</div>
             <Reveal>
               <h2 className="text-section">
-                Four practices. <span className="gold-text italic">one delivery team.</span>
+                Four expertises. <span className="gold-text italic">One delivery team.</span>
               </h2>
             </Reveal>
           </div>
           <div className="md:col-span-5">
             <p className="text-[color:var(--muted-foreground)] text-base leading-relaxed">
-              Big Bang Tech Solutions is a full-stack technology partner. We help companies launch new digital products, modernise legacy systems, and ship AI into production - without juggling agencies.
+              Big Bang Tech Solutions is a full-stack technology partner. We help companies launch new digital products, modernize existing systems, and put AI into production - without juggling multiple agencies.
             </p>
           </div>
         </div>
@@ -258,14 +258,14 @@ function Who() {
         <div className="md:col-span-9">
           <Reveal>
             <h2 className="text-section max-w-4xl">
-              A tech-driven agency revolutionising business through{" "}
+              A technology-driven agency revolutionizing businesses through{" "}
               <span className="gold-text italic">AI, automation</span> and custom software.
             </h2>
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mt-12 text-[color:var(--muted-foreground)] text-lg max-w-2xl leading-relaxed">
               Big Bang Tech Solutions Pvt Ltd partners with founders and enterprises to design,
-              engineer and ship products that move markets - quietly, precisely, at scale.
+              develop, and deploy products that move markets - quietly, with precision and at scale.
             </p>
           </Reveal>
         </div>
@@ -276,11 +276,11 @@ function Who() {
 
 /* -------------------------- Section 3: Story (stacking cards) -------------------------- */
 const STORY = [
-  { n: "01", t: "Innovation", d: "Research-led prototyping for products that did not exist yesterday." },
-  { n: "02", t: "Automation", d: "Replacing repetitive work with composable, observable systems." },
-  { n: "03", t: "AI", d: "Foundation models and agents wired into the workflows that matter." },
-  { n: "04", t: "Cloud", d: "Multi-region infrastructure designed for resilience and quiet scale." },
-  { n: "05", t: "Transformation", d: "Re-architecting legacy estates into modern digital organisations." },
+  { n: "01", t: "Innovation", d: "Research-driven prototyping for products that didn't exist yesterday." },
+  { n: "02", t: "Automation", d: "Replacing repetitive labor with composable, observable systems." },
+  { n: "03", t: "AI", d: "Foundation models and agents embedded into the workflows that matter." },
+  { n: "04", t: "Cloud", d: "Multi-region infrastructure architected for resilience and quiet scale." },
+  { n: "05", t: "Transformation", d: "Re-platforming legacy systems into modern digital organizations." },
 ];
 
 function Story() {
@@ -289,7 +289,7 @@ function Story() {
       <div className="max-w-7xl mx-auto">
         <div className="text-eyebrow mb-6">The Big Bang Story</div>
         <Reveal>
-          <h2 className="text-section max-w-3xl">A universe of capability, expanding.</h2>
+          <h2 className="text-section max-w-3xl">A universe of capabilities, rapidly expanding.</h2>
         </Reveal>
 
         <div className="mt-16 md:mt-24 relative">
@@ -333,7 +333,7 @@ function Story() {
 
 /* -------------------------- Mission -------------------------- */
 function Mission() {
-  const text = "Our mission is to drive innovation and create cutting-edge solutions that empower businesses to achieve their full potential.";
+  const text = "Our mission is to drive innovation and build cutting-edge solutions that empower businesses to reach their full potential.";
   const words = text.split(" ");
   return (
     <section className="px-6 md:px-12 py-20 md:py-32 bg-[color:var(--space-2)] section-divider">
@@ -373,8 +373,8 @@ function Skills() {
     <section className="px-6 md:px-12 py-20 md:py-32 bg-[color:var(--space-0)] section-divider">
       <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
         <div className="md:col-span-4">
-          <div className="text-eyebrow mb-6">Capability</div>
-          <h2 className="text-section">Crafted disciplines.</h2>
+          <div className="text-eyebrow mb-6">Proficiency</div>
+          <h2 className="text-section">Mastered disciplines.</h2>
         </div>
         <div className="md:col-span-8 space-y-8 md:mt-4">
           {skills.map((s, i) => (
@@ -404,15 +404,15 @@ function Skills() {
 
 /* -------------------------- Services -------------------------- */
 const SERVICES = [
-  { n: "01", t: "Web Development", d: "Performant, accessible web platforms engineered for scale and search.", img: webDevImg },
-  { n: "02", t: "Mobile App Development", d: "Native and cross-platform applications with cinematic interaction quality.", img: mobileDevImg },
-  { n: "03", t: "AI & Automation", d: "LLM systems, agents and orchestration that quietly run your business.", img: aiAutomationImg },
-  { n: "04", t: "Cloud Solutions", d: "Multi-region, multi-cloud architecture with first-class observability.", img: cloudSolutionsImg },
-  { n: "05", t: "Cybersecurity", d: "Threat modeling, hardening and continuous monitoring at enterprise grade.", img: cybersecurityImg },
-  { n: "06", t: "Big Data", d: "Pipelines, lakehouses and analytics that turn signal into decisions.", img: bigDataImg },
+  { n: "01", t: "Web Development", d: "High-performance, search-optimised web platforms engineered for scale.", img: webDevImg },
+  { n: "02", t: "Mobile Development", d: "Native and cross-platform applications with cinematic interaction fidelity.", img: mobileDevImg },
+  { n: "03", t: "AI & Automation", d: "LLM systems, agents, and orchestration that quietly manage your business.", img: aiAutomationImg },
+  { n: "04", t: "Cloud Solutions", d: "Multi-region and multi-cloud architecture with top-tier observability.", img: cloudSolutionsImg },
+  { n: "05", t: "Cybersecurity", d: "Enterprise-grade threat modeling, hardening, and continuous monitoring.", img: cybersecurityImg },
+  { n: "06", t: "Big Data", d: "Pipelines, data lakes, and analytics that transform signals into decisions.", img: bigDataImg },
   { n: "07", t: "Revenue Cycle Management", d: "Domain software for healthcare operations and reimbursement workflows.", img: rcmBillingImg },
-  { n: "08", t: "Design & Digital Marketing", d: "Brand systems, motion identity and growth engineering, in one place.", img: designMarketingImg },
-  { n: "09", t: "Crypto · Blockchain · Web3", d: "Smart contracts, L2 infrastructure and tokenised product surfaces.", img: blockchainImg },
+  { n: "08", t: "Design & Digital Marketing", d: "Brand systems, animated identity, and growth engineering in one place.", img: designMarketingImg },
+  { n: "09", t: "Crypto · Blockchain · Web3", d: "Smart contracts, L2 infrastructure, and tokenised product surfaces.", img: blockchainImg },
 ];
 
 function Services() {
@@ -425,7 +425,7 @@ function Services() {
             <h2 className="text-section max-w-2xl">Nine disciplines. One studio.</h2>
           </div>
           <p className="text-[color:var(--muted-foreground)] max-w-md">
-            A vertically integrated team - strategy, design and engineering under one roof, shipping products end to end.
+            A vertically integrated team - strategy, design, and engineering under one roof, delivering end-to-end products.
           </p>
         </div>
 
@@ -465,7 +465,7 @@ function Services() {
 function TechUniverse() {
   const nodes = [
     { l: "AI", x: 50, y: 50, r: 0 },
-    { l: "Apps", x: 50, y: 18, r: 28 },
+    { l: "Applications", x: 50, y: 18, r: 28 },
     { l: "Cloud", x: 78, y: 32, r: 56 },
     { l: "Blockchain", x: 86, y: 68, r: 84 },
     { l: "Cybersecurity", x: 50, y: 84, r: 112 },
@@ -477,7 +477,7 @@ function TechUniverse() {
       <div className="max-w-7xl mx-auto">
         <div className="text-eyebrow mb-6">Ecosystem</div>
         <Reveal>
-          <h2 className="text-section max-w-3xl mb-20">An interconnected technology universe.</h2>
+          <h2 className="text-section max-w-3xl mb-20">An interconnected technological universe.</h2>
         </Reveal>
 
         <div className="relative aspect-square max-w-3xl mx-auto">
@@ -522,14 +522,14 @@ function TechUniverse() {
 function Why() {
   const items = [
     "Innovation", "Scalability", "Security",
-    "Automation", "Expert Team", "Future-Ready Solutions",
+    "Automation", "Expert Team", "Future-proof Solutions",
   ];
   return (
     <section className="px-6 md:px-12 py-20 md:py-32 bg-[color:var(--space-4)] section-divider">
       <div className="max-w-7xl mx-auto">
         <div className="text-eyebrow mb-6">Why Big Bang</div>
         <Reveal>
-          <h2 className="text-section mb-12 md:mb-20 max-w-3xl">Six reasons studios and CTOs choose us.</h2>
+          <h2 className="text-section mb-12 md:mb-20 max-w-3xl">Six reasons why studios and CTOs choose us.</h2>
         </Reveal>
         <div className="divide-y divide-white/5 border-y border-white/5">
           {items.map((t, i) => (
@@ -538,7 +538,7 @@ function Why() {
                 <div className="md:col-span-2 font-display text-[color:var(--gold)]">0{i + 1}</div>
                 <div className="md:col-span-7 font-display text-3xl md:text-5xl font-bold group-hover:text-[color:var(--gold)] transition-colors">{t}</div>
                 <div className="md:col-span-3 text-[15px] text-[color:var(--muted-foreground)]">
-                  Engineered into every engagement, by default.
+                  Built into every engagement, by default.
                 </div>
               </div>
             </Reveal>
@@ -564,19 +564,19 @@ function Contact() {
         <Reveal delay={0.15}>
           <form className="mt-12 md:mt-20 grid md:grid-cols-2 gap-8 md:gap-10 max-w-4xl">
             <Field label="Your name" type="text" />
-            <Field label="Email" type="email" />
+            <Field label="Email address" type="email" />
             <div className="md:col-span-2">
-              <Field label="Mobile number" type="tel" />
+              <Field label="Phone number" type="tel" />
             </div>
             <div className="md:col-span-2">
               <Field label="Tell us about your project" type="textarea" />
             </div>
             <div className="md:col-span-2 flex items-center justify-between flex-wrap gap-4 pt-6">
               <p className="text-[15px] uppercase tracking-[0.25em] text-[color:var(--muted-foreground)]">
-                Reply within 24 hours.
+                Response within 24 hours.
               </p>
               <button type="button" className="btn-gold">
-                Send transmission <span aria-hidden>→</span>
+                Send <span aria-hidden>→</span>
               </button>
             </div>
           </form>
@@ -647,13 +647,13 @@ function FinalCTA() {
         </Reveal>
         <Reveal delay={0.2}>
           <p className="mt-10 text-[color:var(--muted-foreground)] text-lg max-w-xl mx-auto">
-            A single conversation is enough to plot the trajectory. We will take it from there.
+            A single conversation is all it takes to set the trajectory. We take it from there.
           </p>
         </Reveal>
         <Reveal delay={0.3}>
           <div className="mt-14 flex justify-center gap-4 flex-wrap">
             <Link to="/contact" className="btn-gold">Start your project →</Link>
-            <Link to="/contact" className="btn-ghost">Schedule consultation</Link>
+            <Link to="/contact" className="btn-ghost">Schedule a consultation</Link>
           </div>
         </Reveal>
       </div>
