@@ -121,11 +121,11 @@ function Field({ label, type, name, required = false }: FieldProps) {
       <label
         className={`absolute left-0 transition-all duration-300 pointer-events-none ${
           active
-            ? "top-0 text-[15px] text-[color:var(--gold)] tracking-[0.2em] uppercase"
-            : "top-8 text-base text-[color:var(--muted-foreground)]"
+            ? "top-0 text-[13px] text-[color:var(--gold-soft)] font-semibold tracking-[0.2em] uppercase"
+            : "top-8 text-base text-stone-500"
         }`}
       >
-        {label} {required && <span className="text-[color:var(--gold)]">*</span>}
+        {label} {required && <span className="text-red-500 font-bold">*</span>}
       </label>
       {type === "textarea" ? (
         <textarea
@@ -135,7 +135,7 @@ function Field({ label, type, name, required = false }: FieldProps) {
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
           onChange={(e) => setVal(e.target.value)}
-          className="w-full bg-transparent border-b border-white/10 focus:border-[color:var(--gold)] outline-none py-3 text-lg resize-none transition-colors"
+          className="w-full bg-transparent border-b border-stone-200 focus:border-[color:var(--gold)] text-stone-900 outline-none py-3 text-lg resize-none transition-colors"
         />
       ) : (
         <input
@@ -145,7 +145,7 @@ function Field({ label, type, name, required = false }: FieldProps) {
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
           onChange={(e) => setVal(e.target.value)}
-          className="w-full bg-transparent border-b border-white/10 focus:border-[color:var(--gold)] outline-none py-3 text-lg transition-colors"
+          className="w-full bg-transparent border-b border-stone-200 focus:border-[color:var(--gold)] text-stone-900 outline-none py-3 text-lg transition-colors"
         />
       )}
     </div>
@@ -287,7 +287,7 @@ export default function ContactPage() {
       {/* Contact Content Grid */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 mt-16 md:mt-24 grid lg:grid-cols-12 gap-10 md:gap-16 items-start">
         {/* Form Column */}
-        <div className="lg:col-span-7 surface-card p-6 md:p-12 relative overflow-hidden">
+        <div className="lg:col-span-7 bg-[#fafaf9] text-stone-900 p-6 md:p-12 rounded-[28px] border border-[color:var(--gold)]/40 relative overflow-hidden shadow-[0_24px_80px_rgba(212,175,55,0.08)]">
           {submitted ? (
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
@@ -296,16 +296,18 @@ export default function ContactPage() {
             >
               <div className="w-20 h-20 rounded-full border border-[color:var(--gold)] flex items-center justify-center mx-auto relative">
                 <div className="absolute inset-1 rounded-full border border-[color:var(--gold)]/20 animate-ping" />
-                <span className="text-[color:var(--gold)] text-3xl">✓</span>
+                <span className="text-[color:var(--gold)] text-3xl font-semibold">✓</span>
               </div>
-              <h3 className="font-display text-3xl font-bold">Transmission Received</h3>
-              <p className="text-[color:var(--muted-foreground)] max-w-md mx-auto text-[15px]">
+              <h3 className="font-display text-3xl font-bold text-stone-955">
+                Transmission Received
+              </h3>
+              <p className="text-stone-600 max-w-md mx-auto text-[15px]">
                 Your signal has successfully traversed the system. Our team will review the
                 parameters and follow up within 24 hours.
               </p>
               <button
                 onClick={() => setSubmitted(false)}
-                className="btn-ghost mt-6 text-[15px] uppercase tracking-wider"
+                className="btn-ghost border-stone-300 text-stone-800 hover:border-[color:var(--gold)] hover:text-[color:var(--gold)] mt-6 text-[15px] uppercase tracking-wider"
               >
                 Send another message
               </button>
@@ -323,7 +325,7 @@ export default function ContactPage() {
               <Field label="Tell us about your project" type="textarea" name="details" required />
 
               <div className="flex items-center justify-between flex-wrap gap-4 pt-6">
-                <p className="text-[15px] uppercase tracking-[0.25em] text-[color:var(--muted-foreground)]">
+                <p className="text-[14px] uppercase tracking-[0.25em] text-stone-500 font-medium">
                   Response within 24 hours
                 </p>
                 <button
