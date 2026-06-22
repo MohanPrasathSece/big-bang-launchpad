@@ -52,7 +52,10 @@ function SplitHeadline({ text }: { text: string }) {
   return (
     <h1 className="text-hero">
       {words.map((w, i) => (
-        <span key={i} className="inline-block overflow-hidden align-top mr-[0.25em] pt-[0.25em] pb-[0.25em] -mt-[0.25em] -mb-[0.25em]">
+        <span
+          key={i}
+          className="inline-block overflow-hidden align-top mr-[0.25em] pt-[0.25em] pb-[0.25em] -mt-[0.25em] -mb-[0.25em]"
+        >
           <motion.span
             className="inline-block"
             initial={{ y: "110%" }}
@@ -74,7 +77,10 @@ function LuxuryCursor() {
   const sx = useSpring(x, { damping: 30, stiffness: 220, mass: 0.4 });
   const sy = useSpring(y, { damping: 30, stiffness: 220, mass: 0.4 });
   useEffect(() => {
-    const move = (e: MouseEvent) => { x.set(e.clientX); y.set(e.clientY); };
+    const move = (e: MouseEvent) => {
+      x.set(e.clientX);
+      y.set(e.clientY);
+    };
     window.addEventListener("mousemove", move);
     return () => window.removeEventListener("mousemove", move);
   }, [x, y]);
@@ -103,26 +109,24 @@ const VALUES = [
   {
     t: "Precision Engineering",
     d: "We reject bloated frameworks and quick shortcuts. Every line of code, database query, and CSS rule is crafted with long-term build resilience and scale in mind.",
-    icon: "✦"
+    icon: "✦",
   },
   {
     t: "Autonomous Leverage",
     d: "We bake artificial intelligence directly into background tasks. By automating repetitive workflows, we give companies extreme operational leverage.",
-    icon: "⌘"
+    icon: "⌘",
   },
   {
     t: "Hardened Security",
     d: "Data boundaries are sacred. We build secure encryption fabrics, enforce vault protocols, and prepare your stack for SoC2 or HIPAA compliance from day one.",
-    icon: "⌖"
+    icon: "⌖",
   },
   {
     t: "Radical Transparency",
     d: "No middle-man project managers, sales spin, or consultant jargon. You talk directly to the engineers writing your software, with live daily pipeline updates.",
-    icon: "⎈"
-  }
+    icon: "⎈",
+  },
 ];
-
-
 
 /* -------------------------- Component -------------------------- */
 export default function AboutPage() {
@@ -168,12 +172,12 @@ export default function AboutPage() {
             transition={{ duration: 1, delay: 0.5 }}
             className="mt-8 max-w-2xl mx-auto text-[color:var(--muted-foreground)] text-base md:text-lg leading-relaxed"
           >
-            Big Bang Tech Solutions Pvt Ltd is a premium consulting firm built for founders who value speed, precision, and code quality. We don't just build prototypes; we deliver robust production-grade systems engineered for quiet scale.
+            Big Bang Tech Solutions Pvt Ltd is a premium consulting firm built for founders who
+            value speed, precision, and code quality. We don't just build prototypes; we deliver
+            robust production-grade systems engineered for quiet scale.
           </motion.p>
         </div>
       </section>
-
-
 
       {/* Core Values Section */}
       <section className="max-w-7xl mx-auto px-6 md:px-12 mt-20 md:mt-32 section-divider pt-20 md:pt-32">
@@ -182,13 +186,15 @@ export default function AboutPage() {
             <div className="text-eyebrow mb-6">Core Values</div>
             <Reveal>
               <h2 className="text-section">
-                Four practices. <span className="gold-text italic">Zero compromises.</span>
+                Four practices.{" "}
+                <span className="gold-text italic whitespace-nowrap">Zero compromises.</span>
               </h2>
             </Reveal>
           </div>
           <div className="md:col-span-5">
             <p className="text-[color:var(--muted-foreground)] text-[15px] md:text-base leading-relaxed">
-              We anchor our consulting in transparent communication, strict architectural discipline, and high-fidelity product output.
+              We anchor our consulting in transparent communication, strict architectural
+              discipline, and high-fidelity product output.
             </p>
           </div>
         </div>
@@ -198,9 +204,13 @@ export default function AboutPage() {
             <Reveal key={val.t} delay={i * 0.08}>
               <div className="surface-card p-6 md:p-8 h-full flex flex-col justify-between">
                 <div>
-                  <div className="text-3xl text-[color:var(--gold)] mb-6 font-display">{val.icon}</div>
+                  <div className="text-3xl text-[color:var(--gold)] mb-6 font-display">
+                    {val.icon}
+                  </div>
                   <h3 className="font-display text-2xl font-semibold text-white">{val.t}</h3>
-                  <p className="mt-4 text-[15px] md:text-[15px] text-[color:var(--muted-foreground)] leading-relaxed">{val.d}</p>
+                  <p className="mt-4 text-[15px] md:text-[15px] text-[color:var(--muted-foreground)] leading-relaxed">
+                    {val.d}
+                  </p>
                 </div>
               </div>
             </Reveal>
@@ -215,16 +225,36 @@ export default function AboutPage() {
 
         <div className="grid md:grid-cols-4 gap-6 md:gap-8">
           {[
-            { n: "01", t: "Blueprint", d: "Deep architectural mapping, API signatures, cloud diagrams, and technology selection." },
-            { n: "02", t: "Cinematic Design", d: "High-fidelity UI prototyping, design tokens, and interactions." },
-            { n: "03", t: "Sprint Development", d: "Production-ready coding with automated CI/CD deployments and daily updates." },
-            { n: "04", t: "Quiet Scale", d: "Monitored launches with strict telemetry and absolute runtime uptime." }
+            {
+              n: "01",
+              t: "Blueprint",
+              d: "Deep architectural mapping, API signatures, cloud diagrams, and technology selection.",
+            },
+            {
+              n: "02",
+              t: "Cinematic Design",
+              d: "High-fidelity UI prototyping, design tokens, and interactions.",
+            },
+            {
+              n: "03",
+              t: "Sprint Development",
+              d: "Production-ready coding with automated CI/CD deployments and daily updates.",
+            },
+            {
+              n: "04",
+              t: "Quiet Scale",
+              d: "Monitored launches with strict telemetry and absolute runtime uptime.",
+            },
           ].map((step, i) => (
             <Reveal key={step.n} delay={i * 0.05}>
               <div className="bg-white/[0.01] border border-white/5 p-6 md:p-8 rounded-xl relative group hover:border-[color:var(--gold)]/20 transition-colors h-full">
-                <div className="font-display text-[15px] text-[color:var(--gold)] font-bold mb-4 tracking-wider">{step.n}</div>
+                <div className="font-display text-[15px] text-[color:var(--gold)] font-bold mb-4 tracking-wider">
+                  {step.n}
+                </div>
                 <h4 className="font-display text-xl font-bold text-white mb-3">{step.t}</h4>
-                <p className="text-[15px] md:text-base text-[color:var(--muted-foreground)] leading-relaxed">{step.d}</p>
+                <p className="text-[15px] md:text-base text-[color:var(--muted-foreground)] leading-relaxed">
+                  {step.d}
+                </p>
               </div>
             </Reveal>
           ))}
@@ -235,5 +265,3 @@ export default function AboutPage() {
     </main>
   );
 }
-
-

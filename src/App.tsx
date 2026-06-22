@@ -23,6 +23,3 @@ export default function App() {
     </QueryClientProvider>
   );
 }
-
-
-

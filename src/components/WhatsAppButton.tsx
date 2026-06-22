@@ -1,8 +1,6 @@
 export default function WhatsAppButton() {
   const phone = "918668274952"; // +91 86682 74952
-  const message = encodeURIComponent(
-    "Hi, I'd like to know more about Big Bang Tech Solutions."
-  );
+  const message = encodeURIComponent("Hi, I'd like to know more about Big Bang Tech Solutions.");
   const href = `https://wa.me/${phone}?text=${message}`;
 
   return (
@@ -47,9 +45,7 @@ export default function WhatsAppButton() {
         onMouseEnter={(e) =>
           ((e.currentTarget as HTMLAnchorElement).style.transform = "scale(1.1)")
         }
-        onMouseLeave={(e) =>
-          ((e.currentTarget as HTMLAnchorElement).style.transform = "scale(1)")
-        }
+        onMouseLeave={(e) => ((e.currentTarget as HTMLAnchorElement).style.transform = "scale(1)")}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

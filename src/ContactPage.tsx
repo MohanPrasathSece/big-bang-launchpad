@@ -52,7 +52,10 @@ function SplitHeadline({ text }: { text: string }) {
   return (
     <h1 className="text-hero leading-tight">
       {words.map((w, i) => (
-        <span key={i} className="inline-block overflow-hidden align-top mr-[0.25em] pt-[0.25em] pb-[0.25em] -mt-[0.25em] -mb-[0.25em]">
+        <span
+          key={i}
+          className="inline-block overflow-hidden align-top mr-[0.25em] pt-[0.25em] pb-[0.25em] -mt-[0.25em] -mb-[0.25em]"
+        >
           <motion.span
             className="inline-block"
             initial={{ y: "110%" }}
@@ -74,7 +77,10 @@ function LuxuryCursor() {
   const sx = useSpring(x, { damping: 30, stiffness: 220, mass: 0.4 });
   const sy = useSpring(y, { damping: 30, stiffness: 220, mass: 0.4 });
   useEffect(() => {
-    const move = (e: MouseEvent) => { x.set(e.clientX); y.set(e.clientY); };
+    const move = (e: MouseEvent) => {
+      x.set(e.clientX);
+      y.set(e.clientY);
+    };
     window.addEventListener("mousemove", move);
     return () => window.removeEventListener("mousemove", move);
   }, [x, y]);
@@ -220,20 +226,20 @@ export default function ContactPage() {
   const FAQS = [
     {
       q: "What is your typical project engagement timeline?",
-      a: "For MVPs and custom software launches, our sprint build cycles typically span 4 to 8 weeks. Larger cloud re-architectures or deep enterprise AI integrations can range from 3 to 6 months depending on requirements."
+      a: "For MVPs and custom software launches, our sprint build cycles typically span 4 to 8 weeks. Larger cloud re-architectures or deep enterprise AI integrations can range from 3 to 6 months depending on requirements.",
     },
     {
       q: "Do you sign Non-Disclosure Agreements (NDAs)?",
-      a: "Yes, confidentiality is standard. We sign mutual NDAs before sharing telemetry plans, technical specifications, or code diagrams to protect your IP."
+      a: "Yes, confidentiality is standard. We sign mutual NDAs before sharing telemetry plans, technical specifications, or code diagrams to protect your IP.",
     },
     {
       q: "How does the pricing and billing model work?",
-      a: "We work on fixed-scope project agreements based on our initial blueprints, split across milestone payments. For continuous optimization, SLA infrastructure support, or retainer sprints, we offer monthly advisory agreements."
+      a: "We work on fixed-scope project agreements based on our initial blueprints, split across milestone payments. For continuous optimization, SLA infrastructure support, or retainer sprints, we offer monthly advisory agreements.",
     },
     {
       q: "Will we own the full source code and infrastructure assets?",
-      a: "Absolutely. 100% of all code repositories, cloud topology credentials, and configuration files created during our partnership belong completely to you, delivered transparently."
-    }
+      a: "Absolutely. 100% of all code repositories, cloud topology credentials, and configuration files created during our partnership belong completely to you, delivered transparently.",
+    },
   ];
 
   return (
@@ -272,7 +278,8 @@ export default function ContactPage() {
             transition={{ duration: 1, delay: 0.5 }}
             className="mt-8 max-w-2xl mx-auto text-[color:var(--muted-foreground)] text-base md:text-lg leading-relaxed"
           >
-            Have a project in mind or want to explore potential integrations? Send us a message and we'll route it directly to our directors.
+            Have a project in mind or want to explore potential integrations? Send us a message and
+            we'll route it directly to our directors.
           </motion.p>
         </div>
       </section>
@@ -293,7 +300,8 @@ export default function ContactPage() {
               </div>
               <h3 className="font-display text-3xl font-bold">Transmission Received</h3>
               <p className="text-[color:var(--muted-foreground)] max-w-md mx-auto text-[15px]">
-                Your signal has successfully traversed the system. Our team will review the parameters and follow up within 24 hours.
+                Your signal has successfully traversed the system. Our team will review the
+                parameters and follow up within 24 hours.
               </p>
               <button
                 onClick={() => setSubmitted(false)}
@@ -313,7 +321,7 @@ export default function ContactPage() {
                 <Field label="Company / Organisation" type="text" name="company" />
               </div>
               <Field label="Tell us about your project" type="textarea" name="details" required />
-              
+
               <div className="flex items-center justify-between flex-wrap gap-4 pt-6">
                 <p className="text-[15px] uppercase tracking-[0.25em] text-[color:var(--muted-foreground)]">
                   Response within 24 hours
@@ -346,17 +354,20 @@ export default function ContactPage() {
             <div className="text-eyebrow">Cosmic Coordinates</div>
             <h3 className="font-display text-3xl font-semibold">Where we orbit.</h3>
             <p className="text-[15px] md:text-[15px] text-[color:var(--muted-foreground)] leading-relaxed">
-              While we operate with a distributed cloud-first team, our physical directors operate out of key commercial nodes.
+              While we operate with a distributed cloud-first team, our physical directors operate
+              out of key commercial nodes.
             </p>
-            
+
             <div className="space-y-6 pt-4">
-              {[
-                { city: "India" },
-                { city: "Dubai" }
-              ].map((loc) => (
-                <div key={loc.city} className="flex gap-4 items-start border-l border-[color:var(--gold)]/30 pl-4 py-1">
+              {[{ city: "India" }, { city: "Dubai" }].map((loc) => (
+                <div
+                  key={loc.city}
+                  className="flex gap-4 items-start border-l border-[color:var(--gold)]/30 pl-4 py-1"
+                >
                   <div>
-                    <h4 className="font-display text-lg font-bold text-white leading-tight">{loc.city}</h4>
+                    <h4 className="font-display text-lg font-bold text-white leading-tight">
+                      {loc.city}
+                    </h4>
                   </div>
                 </div>
               ))}
@@ -365,17 +376,25 @@ export default function ContactPage() {
 
           {/* Digital Channels */}
           <div className="space-y-4 pt-6 border-t border-white/5">
-            <div className="text-[15px] uppercase tracking-widest text-white/40">Direct Signals</div>
+            <div className="text-[15px] uppercase tracking-widest text-white/40">
+              Direct Signals
+            </div>
             <div className="space-y-2 text-[15px]">
               <div className="flex justify-between py-2 border-b border-white/5">
                 <span className="text-[color:var(--muted-foreground)]">General inquiries</span>
-                <a href="mailto:info@thebigbangtech.com" className="text-white hover:text-[color:var(--gold)] transition">
+                <a
+                  href="mailto:info@thebigbangtech.com"
+                  className="text-white hover:text-[color:var(--gold)] transition"
+                >
                   info@thebigbangtech.com
                 </a>
               </div>
               <div className="flex justify-between py-2 border-b border-white/5">
                 <span className="text-[color:var(--muted-foreground)]">Founder Desk</span>
-                <a href="mailto:aveys@thebigbangtech.com" className="text-white hover:text-[color:var(--gold)] transition">
+                <a
+                  href="mailto:aveys@thebigbangtech.com"
+                  className="text-white hover:text-[color:var(--gold)] transition"
+                >
                   aveys@thebigbangtech.com
                 </a>
               </div>
@@ -388,7 +407,7 @@ export default function ContactPage() {
       <section className="max-w-4xl mx-auto px-6 md:px-12 mt-20 md:mt-32 section-divider pt-20 md:pt-32">
         <div className="text-eyebrow text-center mb-6">FAQ</div>
         <h2 className="text-section text-center mb-10 md:mb-16">Clear parameters.</h2>
-        
+
         <div className="space-y-2">
           {FAQS.map((faq, index) => (
             <AccordionItem key={index} question={faq.q} answer={faq.a} />
@@ -400,5 +419,3 @@ export default function ContactPage() {
     </main>
   );
 }
-
-

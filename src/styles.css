@@ -46,12 +46,12 @@
 
 :root {
   /* Layered dark palette - not all black */
-  --space-0: #0b0b10;       /* base near-black */
-  --space-1: #14151c;       /* deep slate */
-  --space-2: #1a1410;       /* warm umber (pairs w/ gold) */
-  --space-3: #0e1419;       /* cool charcoal-blue */
-  --space-4: #1d1d22;       /* graphite */
-  --space-ink: #06070a;     /* deepest */
+  --space-0: #0b0b10; /* base near-black */
+  --space-1: #14151c; /* deep slate */
+  --space-2: #1a1410; /* warm umber (pairs w/ gold) */
+  --space-3: #0e1419; /* cool charcoal-blue */
+  --space-4: #1d1d22; /* graphite */
+  --space-ink: #06070a; /* deepest */
 
   /* Gold system */
   --gold: #d4af37;
@@ -80,13 +80,15 @@
   --ring: #d4af37;
 }
 
-.dark { }
+.dark {
+}
 
 @layer base {
   * {
     border-color: var(--color-border);
   }
-  html, body {
+  html,
+  body {
     background: var(--space-0);
     color: var(--foreground);
     font-family: var(--font-sans);
@@ -102,7 +104,9 @@
 @utility text-hero {
   font-family: var(--font-display);
   font-weight: 500;
-  font-variation-settings: "opsz" 144, "SOFT" 30;
+  font-variation-settings:
+    "opsz" 144,
+    "SOFT" 30;
   letter-spacing: -0.01em;
   line-height: 0.94;
   font-size: clamp(46px, 8.5vw, 104px);
@@ -111,7 +115,9 @@
 @utility text-section {
   font-family: var(--font-display);
   font-weight: 500;
-  font-variation-settings: "opsz" 144, "SOFT" 20;
+  font-variation-settings:
+    "opsz" 144,
+    "SOFT" 20;
   letter-spacing: -0.03em;
   line-height: 1;
   font-size: clamp(38px, 5.6vw, 68px);
@@ -128,21 +134,11 @@
 
 @utility gold-divider {
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(212, 175, 55, 0.6) 50%,
-    transparent 100%
-  );
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.6) 50%, transparent 100%);
 }
 
 @utility gold-text {
-  background: linear-gradient(
-    135deg,
-    #e6c76b 0%,
-    #d4af37 50%,
-    #b8941f 100%
-  );
+  background: linear-gradient(135deg, #e6c76b 0%, #d4af37 50%, #b8941f 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -193,20 +189,28 @@
 }
 
 @utility surface-card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.025) 0%, rgba(255,255,255,0.005) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.025) 0%,
+    rgba(255, 255, 255, 0.005) 100%
+  );
   border: 1px solid rgba(212, 175, 55, 0.22);
   border-radius: 20px;
   transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
   &:hover {
     border-color: rgba(212, 175, 55, 0.55);
-    background: linear-gradient(180deg, rgba(212,175,55,0.04) 0%, rgba(255,255,255,0.01) 100%);
+    background: linear-gradient(
+      180deg,
+      rgba(212, 175, 55, 0.04) 0%,
+      rgba(255, 255, 255, 0.01) 100%
+    );
     transform: translateY(-4px);
   }
 }
 
 @utility surface-card-warm {
-  background: linear-gradient(180deg, rgba(212,175,55,0.05) 0%, rgba(26,20,16,0.6) 100%);
+  background: linear-gradient(180deg, rgba(212, 175, 55, 0.05) 0%, rgba(26, 20, 16, 0.6) 100%);
   border: 1px solid rgba(212, 175, 55, 0.25);
   border-radius: 20px;
   transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
@@ -234,18 +238,35 @@
 }
 
 @keyframes orbit-spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 @keyframes float-y {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-14px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
 }
 @keyframes pulse-gold {
-  0%, 100% { opacity: 0.5; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.06); }
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
 }
 @keyframes draw-line {
-  from { stroke-dashoffset: 1000; }
-  to { stroke-dashoffset: 0; }
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
 }
-

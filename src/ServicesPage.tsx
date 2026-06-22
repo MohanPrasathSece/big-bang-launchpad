@@ -71,7 +71,10 @@ function LuxuryCursor() {
   const sx = useSpring(x, { damping: 30, stiffness: 220, mass: 0.4 });
   const sy = useSpring(y, { damping: 30, stiffness: 220, mass: 0.4 });
   useEffect(() => {
-    const move = (e: MouseEvent) => { x.set(e.clientX); y.set(e.clientY); };
+    const move = (e: MouseEvent) => {
+      x.set(e.clientX);
+      y.set(e.clientY);
+    };
     window.addEventListener("mousemove", move);
     return () => window.removeEventListener("mousemove", move);
   }, [x, y]);
@@ -107,9 +110,9 @@ const SERVICES_DETAILS = [
       "Edge-rendered architectures for lightning-fast loads.",
       "Flawless responsive layouts adapted to all screen vectors.",
       "Strict semantic HTML structures matching WCAG AA accessibility.",
-      "Obsessive SEO hygiene designed for crawling efficiency."
+      "Obsessive SEO hygiene designed for crawling efficiency.",
     ],
-    img: webDevImg
+    img: webDevImg,
   },
   {
     id: "02",
@@ -121,9 +124,9 @@ const SERVICES_DETAILS = [
       "Smooth 60fps animations and micro-gestures.",
       "Offline-first state synchronization models.",
       "Optimized native bridging for device hardware.",
-      "Seamless App Store & Google Play distribution pipeline."
+      "Seamless App Store & Google Play distribution pipeline.",
     ],
-    img: mobileDevImg
+    img: mobileDevImg,
   },
   {
     id: "03",
@@ -135,9 +138,9 @@ const SERVICES_DETAILS = [
       "Retrieval-Augmented Generation (RAG) over corporate knowledge bases.",
       "Intelligent classification, summary, and response agents.",
       "Custom vector databases with lightning-fast semantic search.",
-      "Secure integrations respecting privacy boundaries."
+      "Secure integrations respecting privacy boundaries.",
     ],
-    img: aiAutomationImg
+    img: aiAutomationImg,
   },
   {
     id: "04",
@@ -149,9 +152,9 @@ const SERVICES_DETAILS = [
       "Immutable infrastructure designed via Terraform.",
       "Highly available multi-region deployments with low latencies.",
       "Containerized microservices using Kubernetes orchestration.",
-      "Hardened CI/CD workflows for hands-free releases."
+      "Hardened CI/CD workflows for hands-free releases.",
     ],
-    img: cloudSolutionsImg
+    img: cloudSolutionsImg,
   },
   {
     id: "05",
@@ -163,9 +166,9 @@ const SERVICES_DETAILS = [
       "Rigorous code auditing matching OWASP Top 10 vulnerabilities.",
       "Vault integration to eliminate credential leakage.",
       "Cloudflare WAF policies optimized for API shielding.",
-      "Preparation for SOC2, HIPAA, and ISO 27001 validation."
+      "Preparation for SOC2, HIPAA, and ISO 27001 validation.",
     ],
-    img: cybersecurityImg
+    img: cybersecurityImg,
   },
   {
     id: "06",
@@ -177,9 +180,9 @@ const SERVICES_DETAILS = [
       "High-throughput event streaming designed on Kafka.",
       "Optimized cloud warehousing setup (Snowflake, BigQuery).",
       "Robust ETL pipelines using dbt for reliable transformations.",
-      "Data lakes structured for quick ML exploration."
+      "Data lakes structured for quick ML exploration.",
     ],
-    img: bigDataImg
+    img: bigDataImg,
   },
   {
     id: "07",
@@ -191,9 +194,9 @@ const SERVICES_DETAILS = [
       "FHIR & HL7 compatibility layers for medical interoperability.",
       "Automated claims scrubbing protocols minimizing denials.",
       "Custom analytics dashboards outlining payer performances.",
-      "Strict HIPAA compliance audits built by default."
+      "Strict HIPAA compliance audits built by default.",
     ],
-    img: rcmBillingImg
+    img: rcmBillingImg,
   },
   {
     id: "08",
@@ -205,9 +208,9 @@ const SERVICES_DETAILS = [
       "Cinematic user interface prototypes that translate to pixel-perfect code.",
       "Unified design tokens shared across all web surfaces.",
       "High-converting landing pages built on data insights.",
-      "SEO/SEM content campaigns focusing on buyer search intent."
+      "SEO/SEM content campaigns focusing on buyer search intent.",
     ],
-    img: designMarketingImg
+    img: designMarketingImg,
   },
   {
     id: "09",
@@ -219,10 +222,10 @@ const SERVICES_DETAILS = [
       "Gas-optimised smart contracts conforming to ERC-20/721/1155.",
       "Secure integrations with DeFi liquidity pools.",
       "Custom decentralized voting and DAO coordination layers.",
-      "Fully audited smart contract deployments."
+      "Fully audited smart contract deployments.",
     ],
-    img: blockchainImg
-  }
+    img: blockchainImg,
+  },
 ];
 
 /* -------------------------- Page -------------------------- */
@@ -283,7 +286,8 @@ export default function ServicesPage() {
             transition={{ duration: 1, delay: 0.5 }}
             className="mt-8 max-w-2xl mx-auto text-[color:var(--muted-foreground)] text-base md:text-lg leading-relaxed"
           >
-            Explore our nine foundational engineering disciplines. We bring senior strategy, high-fidelity design, and high-scale software development under one operational roof.
+            Explore our nine foundational engineering disciplines. We bring senior strategy,
+            high-fidelity design, and high-scale software development under one operational roof.
           </motion.p>
         </div>
       </section>
@@ -304,7 +308,9 @@ export default function ServicesPage() {
                     {service.id}
                   </span>
                   <div className="w-10 h-px bg-[color:var(--gold)]/40" />
-                  <span className="text-[15px] uppercase tracking-widest text-white/40">Capability</span>
+                  <span className="text-[15px] uppercase tracking-widest text-white/40">
+                    Capability
+                  </span>
                 </div>
                 <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-white">
                   {service.title}
@@ -340,13 +346,19 @@ export default function ServicesPage() {
               </div>
 
               {/* Graphic/Mockup Area */}
-              <div className={`lg:col-span-5 flex justify-center ${index % 2 === 1 ? "lg:order-1" : ""}`}>
+              <div
+                className={`lg:col-span-5 flex justify-center ${index % 2 === 1 ? "lg:order-1" : ""}`}
+              >
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   transition={{ duration: 0.4 }}
                   className="w-full max-w-md surface-card overflow-hidden p-2 flex items-center justify-center bg-white/[0.01]"
                 >
-                  <img src={service.img} alt={service.title} className="w-full h-auto object-cover rounded-xl opacity-80 hover:opacity-100 transition-opacity duration-500" />
+                  <img
+                    src={service.img}
+                    alt={service.title}
+                    className="w-full h-auto object-cover rounded-xl opacity-80 hover:opacity-100 transition-opacity duration-500"
+                  />
                 </motion.div>
               </div>
             </div>
@@ -357,9 +369,11 @@ export default function ServicesPage() {
       {/* Services Footer CTA */}
       <section className="relative mt-16 md:mt-24 px-6 md:px-12 text-center py-16 md:py-20 overflow-hidden">
         {/* radial light */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] h-[90vw] rounded-full -z-10 pointer-events-none"
+        <div
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] h-[90vw] rounded-full -z-10 pointer-events-none"
           style={{
-            background: "radial-gradient(circle, rgba(212,175,55,0.12) 0%, rgba(212,175,55,0.02) 20%, transparent 60%)",
+            background:
+              "radial-gradient(circle, rgba(212,175,55,0.12) 0%, rgba(212,175,55,0.02) 20%, transparent 60%)",
           }}
         />
       </section>
@@ -367,5 +381,3 @@ export default function ServicesPage() {
     </main>
   );
 }
-
-
