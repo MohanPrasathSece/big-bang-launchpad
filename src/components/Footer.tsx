@@ -99,7 +99,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div>
+            <div className="col-span-2 sm:col-span-1">
               <div className="text-[15px] uppercase tracking-[0.3em] text-[color:var(--gold)] mb-6 font-bold">
                 Contact
               </div>
@@ -107,7 +107,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="mailto:info@thebigbangtech.com"
-                    className="hover:text-[color:var(--gold)] transition-colors break-words"
+                    className="hover:text-[color:var(--gold)] transition-colors whitespace-nowrap"
                   >
                     info@thebigbangtech.com
                   </a>
