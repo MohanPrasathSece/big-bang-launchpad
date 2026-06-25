@@ -165,7 +165,7 @@ function AccordionItem({ question, answer }: { question: string; answer: string 
           {question}
         </span>
         <span className="text-xl text-[color:var(--gold)] ml-4 font-mono select-none">
-          {isOpen ? "−" : "+"}
+          {isOpen ? "-" : "+"}
         </span>
       </button>
       <motion.div
